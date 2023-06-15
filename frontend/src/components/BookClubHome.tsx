@@ -3,6 +3,7 @@ import { CurrentBook } from "./CurrentBook";
 import {useState} from 'react'
 import { SearchBar } from "./SearchBar";
 import { SearchResults } from "./SearchResults";
+import { DiscussionBoard } from "./DiscussionBoard/DiscussionBoard";
 
 export function BookClubHome() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -14,7 +15,7 @@ setSearchTerm(term)
     return(
         <div>
             <CurrentBook />
-            {/* <DiscussionBoard></DiscussionBoard> */}
+            <DiscussionBoard></DiscussionBoard>
             <SearchBar onSearch = {handleSearch}></SearchBar>
             <SearchResults query={searchTerm}></SearchResults>
             
