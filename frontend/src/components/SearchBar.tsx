@@ -2,28 +2,26 @@ import { useState } from "react";
 import { searchBooks } from "../services/BookService";
 import { Book } from "../models/Book";
 
-export function SearchBar(props: { onSearch: (Book: Book[]) => Book[] }) {
-  const [searchInput, setSearchInput] = useState<Book[]>([]);
+export function SearchBar(props: { onSearch: (books: Book[]) => void }) {
+  // Define state for the search input
+  const [searchInput, setSearchInput] = useState("");
 
-  // function handleInputChange(e: any) {
-  //     setSearchInput(e.target.value)
-  // }
-
+  // Handle form submission
   function formSubmit(e: any) {
     e.preventDefault();
-    props.onSearch(searchInput);
+    // Call the searchBooks function and pass the search input
+    searchBooks(searchInput).then((data) => {
+      // Call the onSearch callback function with the search results
+      props.onSearch(data);
+    });
   }
 
   return (
     <div>
       <form onSubmit={(e) => formSubmit(e)}>
         <input
-          value={''}
-          onChange={(e) =>
-            searchBooks(e.target.value).then((data) =>
-              setSearchInput(data.docs)
-            )
-          }
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
           type="text"
           placeholder="Search by title"
         />
