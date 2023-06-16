@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Book } from "../models/Book";
 
 export function SearchResults(props: { Books: Book[]}) {
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<Book[]>([]);
 
   
 
@@ -21,3 +21,10 @@ export function SearchResults(props: { Books: Book[]}) {
     </div>
   );
 }
+
+//Add model book
+// Change state array of books (state)
+// Remove search books from search results
+// Change search bar to pass up the array of books (data.docs)
+// Change bookclub home an array too
+
