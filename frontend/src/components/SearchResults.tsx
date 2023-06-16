@@ -2,12 +2,10 @@ import { useState, useEffect } from "react";
 import { searchBooks } from "../services/BookService";
 import { Link } from "react-router-dom";
 
-export function SearchResults(props: { query: string }) {
+export function SearchResults(props: { query:  }) {
   const [results, setResults] = useState<any[]>([]);
 
-  useEffect(() => {
-    searchBooks(props.query).then((data) => setResults(data));
-  }, [props.query]);
+  
 
   return (
     <div>
