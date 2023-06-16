@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { searchBooks } from "../services/BookService";
 import { Link } from "react-router-dom";
+import { Book } from "../models/Book";
 
-export function SearchResults(props: { query:  }) {
+export function SearchResults(props: { Books: Book[]}) {
   const [results, setResults] = useState<any[]>([]);
 
   

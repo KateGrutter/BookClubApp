@@ -4,20 +4,21 @@ import {useState} from 'react'
 import { SearchBar } from "./SearchBar";
 import { SearchResults } from "./SearchResults";
 import { DiscussionBoard } from "./DiscussionBoard/DiscussionBoard";
+import { Book } from "../models/Book";
 
 export function BookClubHome() {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [books, setBooks] = useState<Book[]>([]);
 
-function handleSearch(term: string): any {
-setSearchTerm(term)
-}
+// function handleSearch(term: string): any {
+// setBooks(books)
+// }
 
     return(
         <div>
             <CurrentBook />
             <DiscussionBoard></DiscussionBoard>
-            <SearchBar onSearch = {handleSearch}></SearchBar>
-            <SearchResults query={searchTerm}></SearchResults>
+            <SearchBar onSearch = {setBooks(books)}></SearchBar>
+            <SearchResults Books={books}></SearchResults>
             
         </div>
     )
