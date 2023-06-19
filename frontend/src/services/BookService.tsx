@@ -18,3 +18,14 @@ export function searchBooks(query: string): Promise<Book[]> {
       }))
     );
 }
+
+export function bookDetails(key: string) {
+  return axios
+    .get(`https://openlibrary.org/works/${key}.json`)
+    .then((response) => 
+    response.data.docs.map((doc: any) => ({
+      title: doc.title,
+      author: doc.author,
+      details: doc.details,
+    })))
+}
