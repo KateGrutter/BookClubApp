@@ -32,6 +32,7 @@ export function UserPost(props: {post: Post}) {
                 <h3>{props.post.userName}</h3>
                 <p>{props.post.thought}</p>
                 <button className="reply" onClick={() => setIsOpen(true)}>Reply</button>
+                {/* <button onClick={() => props.onDelete()}>Delete</button> */}
                 <div className="reply-container">
                 {
                     posts.map((post, i) => <ReplyPost post={post} key={i}></ReplyPost>)
