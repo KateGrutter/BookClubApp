@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { searchBooks } from "../services/BookService";
-import { Book } from "../models/Book";
+import { searchBooks } from "../../services/BookService";
+import { Book } from "../../models/Book";
 
 export function SearchBar(props: { onSearch: (books: Book[]) => void }) {
   // Define state for the search input

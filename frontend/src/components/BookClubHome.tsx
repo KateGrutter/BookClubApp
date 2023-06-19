@@ -1,8 +1,8 @@
 import { CurrentBook } from "./CurrentBook";
 // import { DiscussionBoard } from "./DiscussionBoard/DiscussionBoard";
 import { useState } from "react";
-import { SearchBar } from "./SearchBar";
-import { SearchResults } from "./SearchResults";
+import { SearchBar } from "./SearchBar/SearchBar";
+import { SearchResults } from "./SearchBar/SearchResults";
 import { DiscussionBoard } from "./DiscussionBoard/DiscussionBoard";
 import { Book } from "../models/Book";
 import { Header } from "./Header/Header";

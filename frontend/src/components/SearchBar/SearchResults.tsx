@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Book } from "../models/Book";
+import { Book } from "../../models/Book";
 
 export function SearchResults(props: { Books: Book[] }) {
   // Define state for the search results
@@ -16,7 +16,7 @@ export function SearchResults(props: { Books: Book[] }) {
   console.log("results:", results);
 
   return (
-    <div>
+    <div className="results">
       <h2>Search Results</h2>
       {results.length > 0 ? (
         // Display the search results if there are any
