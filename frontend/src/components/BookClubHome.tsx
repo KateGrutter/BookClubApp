@@ -6,6 +6,7 @@ import { SearchResults } from "./SearchBar/SearchResults";
 import { DiscussionBoard } from "./DiscussionBoard/DiscussionBoard";
 import { Book } from "../models/Book";
 import { Header } from "./Header/Header";
+import { ProfilePage } from "./ProfilePage/ProfilePage";
 
 export function BookClubHome() {
   const [books, setBooks] = useState<Book[]>([]); // Declare a state variable 'books' using the useState hook, initialize it with an empty array. 'setBooks' is the function to update the 'books' state.
@@ -24,6 +25,7 @@ export function BookClubHome() {
       ></SearchBar>
 
       <SearchResults Books={books}></SearchResults>
+      <ProfilePage></ProfilePage>
     </div>
   );
 }
