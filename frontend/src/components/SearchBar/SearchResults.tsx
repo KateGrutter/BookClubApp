@@ -21,7 +21,8 @@ Modal.setAppElement('#root')
 export function SearchResults(props: { Books: Book[] }) {
   // Define state for the search results
   const [results, setResults] = useState<Book[]>([]);
-  const [modalIsOpen, setIsOpen] = useState(false)  
+  const [modalIsOpen, setIsOpen] = useState(false) ;
+  const [selectedBook, setSelectedBook] = useState<Book>()
 
   // Update the search results whenever the Books prop changes
   useEffect(() => {
@@ -33,8 +34,6 @@ export function SearchResults(props: { Books: Book[] }) {
     setIsOpen(false)
 }
 
-
- 
 
   console.log("Books:", props.Books);
   console.log("results:", results);

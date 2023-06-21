@@ -1,6 +1,10 @@
 import axios from "axios";
 import { Book } from "../models/Book";
 
+
+//localhost =>   http://127.0.0.1:5001/bookclubapp-41e2d/us-central1/api
+//global => https://us-central1-bookclubapp-41e2d.cloudfunctions.net/api
+
 export function getBook() {
   return axios
     .get(`https://openlibrary.org/works/OL5815517W.json`)
