@@ -16,6 +16,8 @@ const errorResponse = (error: any, res: any) => {
 
 userRouter.get("/users", async (req, res) => {
   try {
+    const client = await getClient();
+    const users = await client.db().collection<User>('users').find().toArray();
     res.status(200).json(users);
   } catch (err) {
     errorResponse(err, res);
@@ -25,9 +27,8 @@ userRouter.get("/users", async (req, res) => {
 userRouter.get("/users/:id", async (req, res) => {
   try {
     const _id: ObjectId = new ObjectId(req.params.id);
-    const result: User | undefined = users.find((item) =>
-      item._id?.equals(_id)
-    );
+    const client = await getClient();
+    const result = await client.db().collection<User>('users').find({ _id: _id }).toArray();
     if (result) {
       res.status(200);
       res.json(result);
