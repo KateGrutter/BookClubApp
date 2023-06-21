@@ -19,13 +19,8 @@ export function searchBooks(query: string): Promise<Book[]> {
     );
 }
 
-export function bookDetails(key: string) {
+export function bookDetails(key: string): Promise<any> {
   return axios
     .get(`https://openlibrary.org/works/${key}.json`)
-    .then((response) => 
-    response.data.docs.map((doc: any) => ({
-      title: doc.title,
-      author: doc.author,
-      details: doc.details,
-    })))
+    .then(response => response.data)
 }

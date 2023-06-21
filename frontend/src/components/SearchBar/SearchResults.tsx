@@ -32,6 +32,8 @@ export function SearchResults(props: { Books: Book[] }) {
   function closeModal() {
     setIsOpen(false)
 }
+
+
  
 
   console.log("Books:", props.Books);

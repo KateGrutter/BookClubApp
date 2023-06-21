@@ -17,7 +17,7 @@ export function SearchBar(props: { onSearch: (books: Book[]) => void }) {
   }
 
   return (
-    <div>
+    <div className="search-bar">
       <form onSubmit={(e) => formSubmit(e)}>
         <input
           value={searchInput}
