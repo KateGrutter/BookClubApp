@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Book } from "../../models/Book";
 import Modal from 'react-modal'
 import { BookDetails } from "../BookDetails";
-import { bookDetails } from "../../services/BookService";
+
 
 const customStyles = {
   content: {
@@ -22,7 +21,8 @@ export function SearchResults(props: { Books: Book[] }) {
   // Define state for the search results
   const [results, setResults] = useState<Book[]>([]);
   const [modalIsOpen, setIsOpen] = useState(false) ;
-  const [selectedBook, setSelectedBook] = useState<Book>()
+  const [openBookKey, setOpenBookKey] = useState<string|undefined>(undefined)
+  
 
   // Update the search results whenever the Books prop changes
   useEffect(() => {
@@ -44,9 +44,12 @@ export function SearchResults(props: { Books: Book[] }) {
       {results.length > 0 ? (
         // Display the search results if there are any
         results.map((book) => (
-          <Link to={`/books/${book.key}`} key={book.key} onClick={() => setIsOpen(true)}>
-            {book.title}
-          </Link>
+          <button key={book.key} onClick={() => {
+            setOpenBookKey(book.key)
+            setIsOpen(true)
+          }}>
+            {book.title}{book.key}
+          </button>
         ))
       ) : (
         // Display a message when no results are found
@@ -57,7 +60,7 @@ export function SearchResults(props: { Books: Book[] }) {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal">
-      <BookDetails onClose={() => setIsOpen(false)}></BookDetails>
+      <BookDetails onClose={() => setIsOpen(false)} id={openBookKey}></BookDetails>
       </Modal>
     </div>
   );

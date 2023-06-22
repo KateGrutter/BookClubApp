@@ -17,14 +17,14 @@ export function searchBooks(query: string): Promise<Book[]> {
     .then((response) =>
       response.data.docs.map((doc: any) => ({
         key: doc.key,
-        title: doc.title,
-        details: doc.details,
+        title: doc.title
       }))
     );
 }
 
-export function bookDetails(key: string): Promise<any> {
+export function bookDetails(key: string): Promise<Book> {
   return axios
-    .get(`https://openlibrary.org/works/${key}.json`)
+    .get(`https://openlibrary.org${key}.json`)
     .then(response => response.data)
 }
+
