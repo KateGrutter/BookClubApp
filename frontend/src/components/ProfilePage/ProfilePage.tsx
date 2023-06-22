@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react"
 import { User } from "../../models/User"
 import { getUsers } from "../../services/ExpressService"
+import { Link } from "react-router-dom"
 
-export function ProfilePage() {
+export function MemberList() {
 
 const [users, setUsers] = useState<any>([])
 
@@ -11,13 +12,12 @@ getUsers().then(data => setUsers(data))
 }, [])
 
 return (
-    <div id="profile-page">
+    <div id="member-list">
+        <h3>Members</h3>
         {
-            users.map((user: User) => <div>
-                <p>Name: {user.firstName} {user.lastName}</p>
-                <p>Member since: {user.memberSince}</p>
-                <p>Username: {user.userName}</p>
-                </div>)
+            users.map((user: User) => <ul>
+                <li key={user._id}><Link to={``}>Name: {user.firstName} {user.lastName}</Link></li>
+                </ul>)
         }
     </div>
 )
