@@ -21,7 +21,9 @@ export function SearchResults(props: { Books: Book[] }) {
   // Define state for the search results
   const [results, setResults] = useState<Book[]>([]);
   const [modalIsOpen, setIsOpen] = useState(false) ;
-  const [openBookKey, setOpenBookKey] = useState<string|undefined>(undefined)
+  const [openBookKey, setOpenBookKey] = useState<string|undefined>(undefined);
+  const [currentRead, setCurrentRead] = useState<Book>();
+  const [alreadyRead, setAlreadyRead] = useState<Book[]>([]);
   
 
   // Update the search results whenever the Books prop changes
@@ -60,7 +62,7 @@ export function SearchResults(props: { Books: Book[] }) {
         onRequestClose={closeModal}
         style={customStyles}
         contentLabel="Example Modal">
-      <BookDetails onClose={() => setIsOpen(false)} id={openBookKey}></BookDetails>
+      <BookDetails onClose={() => setIsOpen(false)} id={openBookKey} onRead={() => setAlreadyRead} onReading={() => setCurrentRead}></BookDetails>
       </Modal>
     </div>
   );
