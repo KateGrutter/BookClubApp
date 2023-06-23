@@ -6,7 +6,7 @@ import { BookClubHome } from "./components/BookClubHome";
 import { Login } from "./components/LoginForm";
 import { NewUserForm } from "./components/NewUser/NewUserForm";
 import { User } from "./models/User";
-import { MemberList } from "./components/ProfilePage/ProfilePage";
+import { MemberList } from "./components/MemberList";
 
 function App() {
   return (
