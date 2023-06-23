@@ -26,7 +26,7 @@ export function Header() {
             <Link to="/home">Home</Link>
           </li>
           <li>
-            <Link to="/user/:id">Profile</Link>
+            <Link to="/users/:id">Profile</Link>
           </li>
           <li>
             <Link to="/past-reads">Past Reads</Link>

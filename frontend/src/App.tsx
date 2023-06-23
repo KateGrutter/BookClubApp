@@ -6,7 +6,7 @@ import { BookClubHome } from "./components/BookClubHome";
 import { Login } from "./components/LoginForm";
 import { NewUserForm } from "./components/NewUser/NewUserForm";
 import { User } from "./models/User";
-import { MemberList } from "./components/ProfilePage/ProfilePage";
+import { MemberList } from "./components/MemberList";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<BookClubHome />} />
-        <Route path="/user/:id" element={<MemberList />} />
+        <Route path="/users/:id" element={<MemberList />} />
         <Route
           path="/create-profile"
           element={
