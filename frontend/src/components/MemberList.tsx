@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { User } from "../../models/User"
-import { getUsers } from "../../services/ExpressService"
+import { User } from "../models/User"
+import { getUsers } from "../services/ExpressService"
 import { Link } from "react-router-dom"
 
 export function MemberList() {
