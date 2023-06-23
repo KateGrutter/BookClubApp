@@ -1,25 +1,27 @@
-import { useEffect, useState } from "react";
-import { getBook } from "../services/BookService";
+
 import { Book } from "../models/Book";
-import { useParams } from "react-router-dom";
 
 
 export function CurrentBook() {
 
-    const [book, setBook] = useState<Book>();
+    // const [book, setBook] = useState<Book>();
 
-    const key = useParams().key
-
-    useEffect(() => {
-        getBook().then(data => setBook(data))
-    }, []);
+    // useEffect(() => {
+    //     getBook().then(data => setBook(data))
+    // }, []);
 
 
     return(
         <div>
             <h3>Current Read:</h3>
             <div>Insert cover here</div>
-            <p>{book?.title}</p>
+            
         </div>
     )
 }
+//this is basic (dummy) component
+//change state with button 'set current book'
+//function to remove from current, but add to past read
+//mark as read button (finished)
+//menu button past books
+//service call for current book
