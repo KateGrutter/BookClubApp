@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<BookClubHome />} />
-        <Route path="/user/:id" element={<MemberList />} />
+        <Route path="/users/:id" element={<MemberList />} />
         <Route
           path="/create-profile"
           element={
