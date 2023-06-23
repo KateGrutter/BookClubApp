@@ -13,7 +13,7 @@ export function Header() {
           <img src={Bookmark} alt="bookmark logo" />
         </Link>
       </div>
-      
+
       <div>
         <input className="side-menu" type="checkbox" id="side-menu" />
         <label className="hamb" htmlFor="side-menu">
@@ -23,13 +23,16 @@ export function Header() {
       <div className="nav">
         <ul className="menu">
           <li>
-            <Link to="/feed">Home</Link>
+            <Link to="/home">Home</Link>
           </li>
           <li>
-            <Link to="/profile">Profile</Link>
+            <Link to="/user/:id">Profile</Link>
           </li>
           <li>
-            <Link to="/home">Logout</Link>
+            <Link to="/past-reads">Past Reads</Link>
+          </li>
+          <li>
+            <Link to="/">Logout</Link>
           </li>
         </ul>
       </div>
