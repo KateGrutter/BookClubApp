@@ -34,6 +34,7 @@ export function MeetingForm(props: {onAdd: (meeting: Meeting) => void}) {
                 <input value={location} onChange={e => setLocation(e.target.value)} type="text" />
                 <label htmlFor="additional info">Additional Information:</label>
                 <input value={information} onChange={e => setInformation(e.target.value)} type="text" />
+                <button>Set Next Meeting</button>
             </form>
         </div>
     )
