@@ -1,24 +1,23 @@
 import { useEffect, useState } from "react"
 import { User } from "../../models/User"
-import { getUsers } from "../../services/ExpressService"
-import { Link } from "react-router-dom"
+import { getUserById } from "../../services/ExpressService"
+import { Link, useParams } from "react-router-dom"
 
-export function MemberList() {
+export function ProfilePage() {
 
-const [users, setUsers] = useState<any>([])
+const id = useParams().id;
+const [user, setUser] = useState<User>()
+
 
 useEffect(() => {
-getUsers().then(data => setUsers(data))
+getUserById(id!).then(data => setUser(data))
 }, [])
 
 return (
     <div id="member-list">
-        <h3>Members</h3>
-        {
-            users.map((user: User) => <ul>
-                <li key={user._id}><Link to={``}>Name: {user.firstName} {user.lastName}</Link></li>
-                </ul>)
-        }
+        <h1>{user?.firstName} {user?.lastName}</h1>
+        <h3>Username: {user?.userName}</h3>
+        <h3>Member since: {user?.memberSince}</h3>
     </div>
 )
 }
