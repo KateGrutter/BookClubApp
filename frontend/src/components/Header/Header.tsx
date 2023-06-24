@@ -23,7 +23,7 @@ export function Header() {
       <div className="nav">
         <ul className="menu">
           <li>
-            <Link to="/home">Home</Link>
+            <Link to="/feed">Home</Link>
           </li>
           <li>
             <Link to="/users/:id">Profile</Link>

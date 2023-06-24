@@ -19,15 +19,17 @@
 }
 
 .label {
+  color: var(--dark-green);
   margin-bottom: 5px;
 }
 
 .input {
   margin-bottom: 10px;
   padding: 5px;
+  color: var;
 }
 
-.link {
+.new-user {
   margin-bottom: 10px;
   text-decoration: none;
   color: var(--battleship-grey);
@@ -40,4 +42,10 @@
   color: var(--silver);
   border: none;
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .form {
+    max-width: 400px;
+  }
 }

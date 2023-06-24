@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { ProfileHeader } from "../Header/ProfileHeader";
 import "./LoginForm.css";
 
@@ -12,10 +13,15 @@ export function Login() {
           <input type="text" className="input" />
           <label className="label">Password</label>
           <input type="password" className="input" />
-          <a className="link">New User?</a>
-          <button className="button">Log In</button>
+          <p className="new-user">
+            <Link to="/new-user">New User?</Link>
+          </p>
+          <button className="button">Login</button>
         </form>
       </div>
+      <p>
+        <Link to="/feed">bypass login</Link>
+      </p>
     </div>
   );
 }

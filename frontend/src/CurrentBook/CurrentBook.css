@@ -1,0 +1,13 @@
+.current-book {
+  display: flex;
+  flex-direction: column;
+}
+
+.current-book h3 {
+  margin-bottom: 10px;
+}
+
+.current-book img {
+  max-width: 200px;
+  max-height: 200px;
+}
