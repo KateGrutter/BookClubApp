@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans:wght@400;700&display=swap");
+
+:root {
+  --outer-space: #4c5b61;
+  --battleship-grey: #829191;
+  --sage-green: #949b96;
+  --white: #f9f9f9;
+  --dark-green: #2c423f;
+  --silver: #c5c5c5;
+} /* variables*/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--white);
+  font-family: "roboto", sans-serif;
+}
+
+/* Header */
+.header {
+  background-color: var(--dark-green);
+  box-shadow: 1px 1px 5px 0px var(--silver);
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+/* Logo */
+.header-logo {
+  display: inline-block;
+  font-size: 60px;
+  margin-left: 10px;
+}
+
+.header-logo img {
+  width: 35%;
+  height: auto;
+}
