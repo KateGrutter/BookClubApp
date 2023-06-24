@@ -10,11 +10,11 @@ export function BookDetails(props: {
   id: string | undefined;
 }) {
   const [details, setDetails] = useState<any>();
-  const bookKey = useParams().key;
+ 
 
   useEffect(() => {
-    bookDetails(bookKey!).then((data) => setDetails(data));
-  }, [bookKey]);
+    bookDetails(props.id!).then((data) => setDetails(data));
+  }, [props.id]);
   // ! means it will not equal null
   return (
     <div>

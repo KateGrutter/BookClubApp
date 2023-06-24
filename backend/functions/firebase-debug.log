@@ -250,3 +250,76 @@
 [debug] [2023-06-24T01:24:46.475Z] DEBUG: Finishing up request with event=finish
 [debug] [2023-06-24T01:24:46.475Z] DEBUG: Finishing up request with event=close
 [debug] [2023-06-24T01:24:46.475Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-24T01:27:59.249Z] ----------------------------------------------------------------------
+[debug] [2023-06-24T01:27:59.252Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\joane\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2023-06-24T01:27:59.252Z] CLI Version:   12.3.1
+[debug] [2023-06-24T01:27:59.253Z] Platform:      win32
+[debug] [2023-06-24T01:27:59.253Z] Node Version:  v18.16.0
+[debug] [2023-06-24T01:27:59.254Z] Time:          Fri Jun 23 2023 21:27:59 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-06-24T01:27:59.255Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-24T01:27:59.445Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-24T01:27:59.445Z] > authorizing via signed-in user (joanewolf@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2023-06-24T01:27:59.461Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-24T01:27:59.462Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-06-24T01:27:59.486Z] [hub] writing locator at C:\Users\joane\AppData\Local\Temp\hub-bookclubapp-41e2d.json
+[debug] [2023-06-24T01:27:59.520Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-24T01:27:59.521Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-24T01:27:59.521Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2023-06-24T01:27:59.535Z] defaultcredentials: writing to file C:\Users\joane\AppData\Roaming\firebase\joanewolf_gmail_com_application_default_credentials.json
+[debug] [2023-06-24T01:27:59.548Z] Setting GAC to C:\Users\joane\AppData\Roaming\firebase\joanewolf_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\joane\\AppData\\Roaming\\firebase\\joanewolf_gmail_com_application_default_credentials.json"}}
+[debug] [2023-06-24T01:27:59.552Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bookclubapp-41e2d/adminSdkConfig [none]
+[debug] [2023-06-24T01:27:59.795Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bookclubapp-41e2d/adminSdkConfig 403
+[debug] [2023-06-24T01:27:59.796Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bookclubapp-41e2d/adminSdkConfig {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-06-24T01:27:59.796Z] Failed to get Admin SDK config for bookclubapp-41e2d, falling back to cache Failed to get Admin SDK for Firebase project bookclubapp-41e2d. Please make sure the project exists and your account has permission to access it. {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Admin SDK for Firebase project bookclubapp-41e2d. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}},"response":{"statusCode":403}},"exit":1,"message":"HTTP Error: 403, The caller does not have permission","status":403},"status":500}
+[warn] !  functions: Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect. {"metadata":{"emulator":{"name":"functions"},"message":"Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect."}}
+[debug] [2023-06-24T01:27:59.831Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-06-24T01:27:59.832Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-06-24T01:27:59.832Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\joane\\.cache\\firebase\\emulators\\ui-v1.11.6\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\joane\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.6\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-06-24T01:28:00.041Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-06-24T01:28:00.041Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Users\joane\OneDrive\Desktop\finalProject\BookClubApp\backend\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\joane\\OneDrive\\Desktop\\finalProject\\BookClubApp\\backend\\functions\" for Cloud Functions..."}}
+[debug] [2023-06-24T01:28:00.128Z] Validating nodejs source
+[debug] [2023-06-24T01:28:02.475Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1"
+  },
+  "private": true
+}
+[debug] [2023-06-24T01:28:02.476Z] Building nodejs source
+[debug] [2023-06-24T01:28:02.476Z] Failed to find version of module node: reached end of search path C:\Users\joane\OneDrive\Desktop\finalProject\BookClubApp\backend\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-06-24T01:28:02.480Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-06-24T01:28:02.488Z] Found firebase-functions binary at 'C:\Users\joane\OneDrive\Desktop\finalProject\BookClubApp\backend\functions\node_modules\.bin\firebase-functions'
