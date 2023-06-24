@@ -54,7 +54,7 @@ ul {
 .menu a {
   display: block;
   padding: 30px;
-  color: var(--outer-space);
+  color: var(--silver);
 }
 .menu a:hover {
   background-color: var(--sage-green);

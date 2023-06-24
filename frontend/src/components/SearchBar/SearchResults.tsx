@@ -1,28 +1,27 @@
 import { useState, useEffect } from "react";
 import { Book } from "../../models/Book";
-import Modal from 'react-modal'
+import Modal from "react-modal";
 import { BookDetails } from "../BookDetails";
-
+import "./SearchResults.css";
 
 const customStyles = {
   content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
+    top: "50%",
+    left: "50%",
+    right: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
   },
 };
 
-Modal.setAppElement('#root')
+Modal.setAppElement("#root");
 
 export function SearchResults(props: { Books: Book[] }) {
   // Define state for the search results
   const [results, setResults] = useState<Book[]>([]);
-  const [modalIsOpen, setIsOpen] = useState(false) ;
-  const [openBookKey, setOpenBookKey] = useState<string|undefined>(undefined);
-  
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [openBookKey, setOpenBookKey] = useState<string | undefined>(undefined);
 
   // Update the search results whenever the Books prop changes
   useEffect(() => {
@@ -31,9 +30,8 @@ export function SearchResults(props: { Books: Book[] }) {
   }, [props.Books]);
 
   function closeModal() {
-    setIsOpen(false)
-}
-
+    setIsOpen(false);
+  }
 
   console.log("Books:", props.Books);
   console.log("results:", results);
@@ -44,11 +42,14 @@ export function SearchResults(props: { Books: Book[] }) {
       {results.length > 0 ? (
         // Display the search results if there are any
         results.map((book) => (
-          <button key={book.key} onClick={() => {
-            setOpenBookKey(book.key)
-            setIsOpen(true)
-          }}>
-            {book.title}{book.key}
+          <button
+            key={book.key}
+            onClick={() => {
+              setOpenBookKey(book.key);
+              setIsOpen(true);
+            }}
+          >
+            {book.title}
           </button>
         ))
       ) : (
@@ -56,11 +57,16 @@ export function SearchResults(props: { Books: Book[] }) {
         <p>No results found.</p>
       )}
 
-      <Modal isOpen={modalIsOpen}
+      <Modal
+        isOpen={modalIsOpen}
         onRequestClose={closeModal}
         style={customStyles}
-        contentLabel="Example Modal">
-      <BookDetails onClose={() => setIsOpen(false)} id={openBookKey}></BookDetails>
+        contentLabel="Example Modal"
+      >
+        <BookDetails
+          onClose={() => setIsOpen(false)}
+          id={openBookKey}
+        ></BookDetails>
       </Modal>
     </div>
   );

@@ -39,6 +39,7 @@ export function BookClubHome() {
       <div className="feed-item">
         <div className="meeting-form">
           <MeetingForm onAdd={(meeting: Meeting) => onAdd(meeting)} />
+          <NextMeeting meeting={meeting} />
         </div>
       </div>
       <div className="feed-item">
