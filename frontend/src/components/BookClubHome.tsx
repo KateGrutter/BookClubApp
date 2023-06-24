@@ -9,38 +9,36 @@ import { Header } from "./Header/Header";
 import { NextMeeting } from "./Meeting/NextMeeting";
 import { Meeting } from "../models/Meeting";
 import { MeetingForm } from "./Meeting/MeetingForm";
-
+import { MemberList } from "./MemberList";
 
 export function BookClubHome() {
   const [books, setBooks] = useState<Book[]>([]); // Declare a state variable 'books' using the useState hook, initialize it with an empty array. 'setBooks' is the function to update the 'books' state.
-  const [meeting, setMeeting] = useState<Meeting>(
-    {date: 'June 25',
-    time: '11:00am',
-    location: '6854 Woodbrook Dr SE',
-    information: 'Please join us for brunch to discuss "Once Upon a Wardrobe"'
-
-  })
+  const [meeting, setMeeting] = useState<Meeting>({
+    date: "June 25",
+    time: "11:00am",
+    location: "6854 Woodbrook Dr SE",
+    information: 'Please join us for brunch to discuss "Once Upon a Wardrobe"',
+  });
   // function handleSearch(term: string): any {
   // setBooks(books)
   // }
 
   function onAdd(newMeeting: Meeting) {
-    setMeeting(newMeeting)
-}
+    setMeeting(newMeeting);
+  }
 
   return (
     <div>
       <Header></Header>
-      <MeetingForm onAdd={(meeting: Meeting) => onAdd(meeting)}/>
-      <NextMeeting meeting={meeting}/>
-      <CurrentBook/>
+      <MeetingForm onAdd={(meeting: Meeting) => onAdd(meeting)} />
+      <NextMeeting meeting={meeting} />
+      <CurrentBook />
       <DiscussionBoard></DiscussionBoard>
       <SearchBar
         onSearch={(searchResults: Book[]) => setBooks(searchResults)}
       ></SearchBar>
-
+      <MemberList />
       <SearchResults Books={books}></SearchResults>
-      
     </div>
   );
 }

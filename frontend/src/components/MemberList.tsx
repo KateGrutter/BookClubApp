@@ -1,24 +1,27 @@
-import { useEffect, useState } from "react"
-import { User } from "../models/User"
-import { getUsers } from "../services/ExpressService"
-import { Link } from "react-router-dom"
+import { useEffect, useState } from "react";
+import { User } from "../models/User";
+import { getUsers } from "../services/ExpressService";
+import { Link } from "react-router-dom";
 
 export function MemberList() {
+  const [users, setUsers] = useState<any>([]);
 
-const [users, setUsers] = useState<any>([])
+  useEffect(() => {
+    getUsers().then((data) => setUsers(data));
+  }, []);
 
-useEffect(() => {
-getUsers().then(data => setUsers(data))
-}, [])
-
-return (
+  return (
     <div id="member-list">
-        <h3>Members</h3>
-        {
-            users.map((user: User) => <ul>
-                <li key={user._id}><Link to={``}>Name: {user.firstName} {user.lastName}</Link></li>
-                </ul>)
-        }
+      <h3>Members</h3>
+      {users.map((user: User) => (
+        <ul>
+          <li key={user._id}>
+            <Link to={``}>
+              Name: {user.name} {user.lastName}
+            </Link>
+          </li>
+        </ul>
+      ))}
     </div>
-)
+  );
 }
