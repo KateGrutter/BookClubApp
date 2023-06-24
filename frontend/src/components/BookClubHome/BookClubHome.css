@@ -1,51 +1,42 @@
-.book-club-home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.book-club-home .feed-item {
+.feed-item {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-.book-club-home .current-read,
-.book-club-home .meeting-details,
-.book-club-home .discussion,
-.book-club-home .member-list,
-.book-club-home .search-bar,
-.book-club-home .search-results {
+.current-read,
+.meeting-details,
+.discussion,
+.member-list,
+.search-bar,
+.search-results {
   padding: 20px;
 }
-
-.book-club-home .current-read {
+.current-read {
   margin-bottom: 20px;
 }
 
-.book-club-home .section-title {
+.section-title {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-.book-club-home .header {
+.header {
   align-self: flex-start;
 }
 
-.book-club-home .current-read {
+.current-read {
   align-self: flex-start;
 }
-
-.book-club-home .meeting-details {
+.meeting-details {
   align-self: flex-end;
 }
 
-.book-club-home .discussion {
+.discussion {
   align-self: center;
 }
 
-.book-club-home .member-list {
+.member-list {
   align-self: flex-end;
 }
 
@@ -56,7 +47,7 @@
     margin-bottom: 20px;
   }
 
-  .book-club-home .current-read {
+  .current-read {
     margin-bottom: 0;
   }
 }

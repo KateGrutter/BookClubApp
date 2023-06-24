@@ -1,6 +1,10 @@
 import { Header } from "./Header/Header";
 
 export function PastReads() {
-  <Header />;
-  return <div>List of past reads.</div>;
+  return (
+    <div>
+      <Header />
+      <p>List of past reads.</p>
+    </div>
+  );
 }
