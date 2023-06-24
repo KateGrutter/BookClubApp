@@ -10,7 +10,7 @@ import { NextMeeting } from "./Meeting/NextMeeting";
 import { Meeting } from "../models/Meeting";
 import { MeetingForm } from "./Meeting/MeetingForm";
 import { MemberList } from "./MemberList";
-import { Login } from "./LoginForm";
+import { Login } from "./LoginForm/LoginForm";
 
 export function BookClubHome() {
   const [books, setBooks] = useState<Book[]>([]); // Declare a state variable 'books' using the useState hook, initialize it with an empty array. 'setBooks' is the function to update the 'books' state.
@@ -30,7 +30,8 @@ export function BookClubHome() {
 
   return (
     <div>
-      <Header></Header>
+      <Login />
+      {/* <Header></Header>
       <MeetingForm onAdd={(meeting: Meeting) => onAdd(meeting)} />
       <NextMeeting meeting={meeting} />
       <CurrentBook />
@@ -39,7 +40,7 @@ export function BookClubHome() {
         onSearch={(searchResults: Book[]) => setBooks(searchResults)}
       ></SearchBar>
       <MemberList />
-      <SearchResults Books={books}></SearchResults>
+      <SearchResults Books={books}></SearchResults> */}
     </div>
   );
 }

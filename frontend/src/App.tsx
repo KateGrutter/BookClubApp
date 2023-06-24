@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
 import { BookClubHome } from "./components/BookClubHome";
-import { Login } from "./components/LoginForm";
+import { Login } from "./components/LoginForm/LoginForm";
 import { NewUserForm } from "./components/NewUser/NewUserForm";
 import { User } from "./models/User";
 import { MemberList } from "./components/MemberList";

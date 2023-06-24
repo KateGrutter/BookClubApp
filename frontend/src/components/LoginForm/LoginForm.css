@@ -1,0 +1,43 @@
+:root {
+  --outer-space: #4c5b61;
+  --battleship-grey: #829191;
+  --sage-green: #949b96;
+  --white: #f9f9f9;
+  --dark-green: #2c423f;
+  --silver: #c5c5c5;
+} /* variables*/
+
+.container {
+  margin-top: 100px; /* Adjust the margin-top value as needed */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.label {
+  margin-bottom: 5px;
+}
+
+.input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.link {
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: var(--battleship-grey);
+  text-align: center;
+}
+
+.button {
+  padding: 10px;
+  background-color: var(--outer-space);
+  color: var(--silver);
+  border: none;
+  cursor: pointer;
+}
