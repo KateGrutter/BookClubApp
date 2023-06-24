@@ -1,9 +1,9 @@
-import { Header } from "./Header/Header";
+import { ProfileHeader } from "./Header/ProfileHeader";
 
 export function Login() {
   return (
     <div>
-      <Header />
+      <ProfileHeader />
       <form>
         <label>Username</label>
         <input type="text"></input>
