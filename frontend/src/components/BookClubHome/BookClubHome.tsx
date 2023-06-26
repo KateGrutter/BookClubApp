@@ -48,9 +48,7 @@ export function BookClubHome() {
         </div>
       </div>
       <div className="feed-item">
-        <div className="member-list">
-          <MemberList />
-        </div>
+        <div className="member-list">{/* <MemberList /> */}</div>
       </div>
       <div className="feed-item">
         <div>

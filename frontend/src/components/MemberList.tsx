@@ -17,7 +17,7 @@ export function MemberList() {
         <ul>
           <li key={user._id}>
             <Link to={`/users/${user._id}`}>
-              Name: {user.firstName} {user.lastName}
+              Name: {user.firstname} {user.lastname}
             </Link>
           </li>
         </ul>

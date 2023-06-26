@@ -19,11 +19,11 @@ export function NewUserForm(props: { onAdd: (newUser: User) => void }) {
         onSubmit={(e) => {
           e.preventDefault();
           const newUser = {
-            firstName: firstName,
-            lastName: lastName,
-            memberSince: memberSince,
+            firstname: firstName,
+            lastname: lastName,
+            membersince: memberSince,
             email: email,
-            userName: userName,
+            username: userName,
           };
 
           props.onAdd(newUser);

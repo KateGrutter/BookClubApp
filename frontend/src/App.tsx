@@ -8,6 +8,7 @@ import { NewUserForm } from "./components/NewUser/NewUserForm";
 import { User } from "./models/User";
 import { MemberList } from "./components/MemberList";
 import { PastReads } from "./components/PastReads";
+import { ProfilePage } from "./components/ProfilePage/ProfilePage";
 
 function App() {
   return (
