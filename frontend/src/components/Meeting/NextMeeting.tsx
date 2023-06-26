@@ -1,4 +1,5 @@
 import { Meeting } from "../../models/Meeting";
+import "./NextMeeting.css";
 
 export function NextMeeting(props: { meeting: Meeting }) {
   return (

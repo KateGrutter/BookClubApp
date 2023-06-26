@@ -18,19 +18,20 @@
 .search-bar input {
   flex: 1;
   padding: 5px;
-  font-size: 14px;
+  font-size: 12px;
   border: 1px solid var(--silver);
   border-radius: 4px;
 }
 
 .search-bar button {
-  padding: 5px 12px;
+  padding: 8px 16px;
   font-size: 12px;
   background-color: var(--outer-space);
-  color: var(--white);
+  color: var(--silver);
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .search-bar button:hover {
