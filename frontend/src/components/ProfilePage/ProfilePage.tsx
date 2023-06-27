@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { User } from "../../models/User";
 import { getUserById } from "../../services/ExpressService";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Header } from "../Header/Header";
 
 export function ProfilePage() {
@@ -10,7 +10,7 @@ export function ProfilePage() {
 
   useEffect(() => {
     getUserById(id!).then((data) => setUser(data));
-  }, []);
+  }, [id]);
 
   return (
     <div id="member-list">

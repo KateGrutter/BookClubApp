@@ -24,7 +24,10 @@ function App() {
         <Route path="/feed" element={<BookClubHome />} />
 
         {/* Route for member list */}
-        <Route path="/users/:id" element={<MemberList />} />
+        <Route path="/users" element={<MemberList />} />
+
+        {/* Route for profile page */}
+        <Route path="/users/:id" element={<ProfilePage />} />
 
         {/* Route for creating a new user profile */}
         <Route
