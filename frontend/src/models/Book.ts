@@ -1,5 +1,5 @@
 export interface Book {
-    key?: string,
+    id?: string,
     title: string
 
 }
