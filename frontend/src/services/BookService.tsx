@@ -13,18 +13,18 @@ export function getBook() {
 
 export function searchBooks(query: string): Promise<Book[]> {
   return axios
-    .get(`http://openlibrary.org/search.json?q=${query}`)
+    .get(`https://www.googleapis.com/books/v1/volumes?q=${query}`)
     .then((response) =>
-      response.data.docs.map((doc: any) => ({
-        key: doc.key,
-        title: doc.title
+      response.data.items.map((items: any) => ({
+        id: items.id,
+        title: items.volumeInfo.title,
+        details: items.volumeInfo.description,
       }))
     );
 }
 
-export function bookDetails(key: string): Promise<Book> {
+export function bookDetails(id: string): Promise<any> {
   return axios
-    .get(`https://openlibrary.org${key}.json`)
+    .get(`https://www.googleapis.com/books/v1/volumes/${id}`)
     .then(response => response.data)
 }
-
