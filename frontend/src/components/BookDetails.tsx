@@ -18,7 +18,7 @@ export function BookDetails(props: {
   // ! means it will not equal null
   return (
     <div>
-      {details?.title}
+      {details?.volumeInfo.title}
       <button onClick={() => props.onClose()}>Cancel</button>
     </div>
   );
