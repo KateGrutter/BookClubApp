@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { ProfileHeader } from "../Header/ProfileHeader";
 import "./LoginForm.css";
+import { signInWithGoogle, signOut } from "../../firebaseConfig";
 
 export function Login() {
   return (
@@ -17,6 +18,8 @@ export function Login() {
             <Link to="/new-user">New User?</Link>
           </p>
           <button className="button">Login</button>
+          <button onClick={signInWithGoogle}>Sign in with Google</button>
+          <button onClick={signOut}>Sign out</button>
         </form>
       </div>
       <p>
