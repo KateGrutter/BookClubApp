@@ -2,18 +2,14 @@ import express from "express";
 import { getClient } from "../db";
 import { ObjectId } from "mongodb";
 import { User } from "../models/User";
-
 const userRouter = express.Router();
-
 const users: User[] = [];
-
 const errorResponse = (error: any, res: any) => {
   console.error("FAIL", error);
   res.status(500).json({
     message: "Internal server error",
   });
 };
-
 userRouter.get("/users", async (req, res) => {
   try {
     const client = await getClient();
@@ -23,7 +19,6 @@ userRouter.get("/users", async (req, res) => {
     errorResponse(err, res);
   }
 });
-
 userRouter.get("/users/:id", async (req, res) => {
   try {
     const _id: ObjectId = new ObjectId(req.params.id);
@@ -42,7 +37,6 @@ userRouter.get("/users/:id", async (req, res) => {
     errorResponse(err, res);
   }
 });
-
 userRouter.post("/users", async (req, res) => {
   try {
     const newUser: User = req.body;
@@ -53,7 +47,6 @@ userRouter.post("/users", async (req, res) => {
     errorResponse(err, res);
   }
 });
-
 userRouter.put("/users/:id", async (req, res) => {
   try {
     const _id: ObjectId = new ObjectId(req.params.id);
@@ -71,7 +64,6 @@ userRouter.put("/users/:id", async (req, res) => {
     errorResponse(err, res);
   }
 });
-
 userRouter.delete("/users/:id", async (req, res) => {
   try {
     const _id: ObjectId = new ObjectId(req.params.id);
@@ -87,5 +79,4 @@ userRouter.delete("/users/:id", async (req, res) => {
     errorResponse(error, res);
   }
 });
-
 export default userRouter;
