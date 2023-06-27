@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 [debug] [2023-06-27T00:54:48.385Z] ----------------------------------------------------------------------
 [debug] [2023-06-27T00:54:48.387Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\kateg\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
 [debug] [2023-06-27T00:54:48.388Z] CLI Version:   12.3.1
@@ -234,3 +235,5 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [debug] [2023-06-27T00:55:07.981Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
 =======
 >>>>>>> c4be7c6e842ddad5d006b0df103476bcfcf0247e
+=======
+>>>>>>> 83e2f8471f5c4864602fc029fb8578391e7e3c0a

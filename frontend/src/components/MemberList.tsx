@@ -4,7 +4,12 @@ import { getUsers } from "../services/ExpressService";
 import { Link } from "react-router-dom";
 import { Header } from "./Header/Header";
 export function MemberList() {
+<<<<<<< HEAD
   const [users, setUsers] = useState<any>([]);
+=======
+  const [users, setUsers] = useState<User[]>([]);
+
+>>>>>>> 83e2f8471f5c4864602fc029fb8578391e7e3c0a
   useEffect(() => {
     getUsers().then((data) => setUsers(data));
   }, []);
@@ -13,7 +18,7 @@ export function MemberList() {
       <Header />
       <h3>Members</h3>
       {users.map((user: User) => (
-        <ul>
+        <ul key={user._id}>
           <li key={user._id}>
             <Link to={`/users/${user._id}`}>
               Name: {user.firstname} {user.lastname}
