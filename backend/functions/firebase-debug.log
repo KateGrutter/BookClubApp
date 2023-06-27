@@ -1,0 +1,239 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+[debug] [2023-06-27T00:54:48.385Z] ----------------------------------------------------------------------
+[debug] [2023-06-27T00:54:48.387Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\kateg\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2023-06-27T00:54:48.388Z] CLI Version:   12.3.1
+[debug] [2023-06-27T00:54:48.388Z] Platform:      win32
+[debug] [2023-06-27T00:54:48.388Z] Node Version:  v18.16.0
+[debug] [2023-06-27T00:54:48.394Z] Time:          Mon Jun 26 2023 20:54:48 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-06-27T00:54:48.394Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-27T00:54:48.475Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-27T00:54:48.475Z] > authorizing via signed-in user (kategrutter@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2023-06-27T00:54:48.493Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-27T00:54:48.494Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-06-27T00:54:48.520Z] [hub] writing locator at C:\Users\kateg\AppData\Local\Temp\hub-bookclubapp-41e2d.json
+[debug] [2023-06-27T00:54:48.570Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-27T00:54:48.570Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-27T00:54:48.570Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2023-06-27T00:54:48.578Z] defaultcredentials: writing to file C:\Users\kateg\AppData\Roaming\firebase\kategrutter_gmail_com_application_default_credentials.json
+[debug] [2023-06-27T00:54:48.588Z] Setting GAC to C:\Users\kateg\AppData\Roaming\firebase\kategrutter_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\kateg\\AppData\\Roaming\\firebase\\kategrutter_gmail_com_application_default_credentials.json"}}
+[debug] [2023-06-27T00:54:48.595Z] > refreshing access token with scopes: []
+[debug] [2023-06-27T00:54:48.599Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-06-27T00:54:48.600Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-27T00:54:48.894Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-06-27T00:54:48.894Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-27T00:54:48.908Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bookclubapp-41e2d/adminSdkConfig [none]
+[debug] [2023-06-27T00:54:49.166Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bookclubapp-41e2d/adminSdkConfig 403
+[debug] [2023-06-27T00:54:49.167Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bookclubapp-41e2d/adminSdkConfig {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-06-27T00:54:49.169Z] Failed to get Admin SDK config for bookclubapp-41e2d, falling back to cache Failed to get Admin SDK for Firebase project bookclubapp-41e2d. Please make sure the project exists and your account has permission to access it. {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Admin SDK for Firebase project bookclubapp-41e2d. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}},"response":{"statusCode":403}},"exit":1,"message":"HTTP Error: 403, The caller does not have permission","status":403},"status":500}
+[warn] !  functions: Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect. {"metadata":{"emulator":{"name":"functions"},"message":"Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect."}}
+[debug] [2023-06-27T00:54:49.201Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-06-27T00:54:49.201Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-06-27T00:54:49.201Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\kateg\\.cache\\firebase\\emulators\\ui-v1.11.6\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\kateg\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.6\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-06-27T00:54:49.389Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-06-27T00:54:49.389Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Users\kateg\OneDrive\Desktop\GC\BookClubApp2\BookClubApp\backend\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\kateg\\OneDrive\\Desktop\\GC\\BookClubApp2\\BookClubApp\\backend\\functions\" for Cloud Functions..."}}
+[debug] [2023-06-27T00:54:49.510Z] Validating nodejs source
+[debug] [2023-06-27T00:54:52.682Z] > [functions] package.json contents: {
+=======
+[debug] [2023-06-27T00:55:15.812Z] ----------------------------------------------------------------------
+[debug] [2023-06-27T00:55:15.813Z] Command:       /Users/baileycytacki-lewis/.nvm/versions/node/v19.4.0/bin/node /Users/baileycytacki-lewis/.nvm/versions/node/v19.4.0/bin/firebase emulators:start --only functions
+[debug] [2023-06-27T00:55:15.813Z] CLI Version:   12.3.1
+[debug] [2023-06-27T00:55:15.814Z] Platform:      darwin
+[debug] [2023-06-27T00:55:15.814Z] Node Version:  v19.4.0
+[debug] [2023-06-27T00:55:15.814Z] Time:          Mon Jun 26 2023 20:55:15 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-06-27T00:55:15.814Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-27T00:55:15.815Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-06-27T00:55:15.865Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-27T00:55:15.865Z] > authorizing via signed-in user (baileycytackilewis@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2023-06-27T00:55:16.120Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-27T00:55:16.121Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-06-27T00:55:16.127Z] [hub] writing locator at /var/folders/nk/600n_ty92j58pvpnt6j4_50c0000gn/T/hub-bookclubapp-41e2d.json
+[debug] [2023-06-27T00:55:16.288Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-27T00:55:16.288Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-27T00:55:16.288Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2023-06-27T00:55:16.291Z] defaultcredentials: writing to file /Users/baileycytacki-lewis/.config/firebase/baileycytackilewis_gmail_com_application_default_credentials.json
+[debug] [2023-06-27T00:55:16.296Z] Setting GAC to /Users/baileycytacki-lewis/.config/firebase/baileycytackilewis_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/baileycytacki-lewis/.config/firebase/baileycytackilewis_gmail_com_application_default_credentials.json"}}
+[debug] [2023-06-27T00:55:16.296Z] > refreshing access token with scopes: []
+[debug] [2023-06-27T00:55:16.296Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-06-27T00:55:16.296Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-27T00:55:16.457Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-06-27T00:55:16.457Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-06-27T00:55:16.533Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-06-27T00:55:16.533Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-27T00:55:16.547Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bookclubapp-41e2d/adminSdkConfig [none]
+[debug] [2023-06-27T00:55:16.987Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bookclubapp-41e2d/adminSdkConfig 200
+[debug] [2023-06-27T00:55:16.988Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bookclubapp-41e2d/adminSdkConfig {"projectId":"bookclubapp-41e2d","storageBucket":"bookclubapp-41e2d.appspot.com"}
+[debug] [2023-06-27T00:55:17.018Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-06-27T00:55:17.018Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-06-27T00:55:17.018Z] Starting Emulator UI with command {"binary":"node","args":["/Users/baileycytacki-lewis/.cache/firebase/emulators/ui-v1.11.6/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/baileycytacki-lewis/.cache/firebase/emulators/ui-v1.11.6/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-06-27T00:55:17.089Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-06-27T00:55:17.089Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "/Users/baileycytacki-lewis/Desktop/BookClubApp/backend/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/baileycytacki-lewis/Desktop/BookClubApp/backend/functions\" for Cloud Functions..."}}
+[debug] [2023-06-27T00:55:17.287Z] Validating nodejs source
+[debug] [2023-06-27T00:55:17.921Z] > [functions] package.json contents: {
+>>>>>>> c4be7c6e842ddad5d006b0df103476bcfcf0247e
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1"
+  },
+  "private": true
+}
+<<<<<<< HEAD
+[debug] [2023-06-27T00:54:52.683Z] Building nodejs source
+[debug] [2023-06-27T00:54:52.684Z] Failed to find version of module node: reached end of search path C:\Users\kateg\OneDrive\Desktop\GC\BookClubApp2\BookClubApp\backend\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-06-27T00:54:52.690Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-06-27T00:54:52.705Z] Found firebase-functions binary at 'C:\Users\kateg\OneDrive\Desktop\GC\BookClubApp2\BookClubApp\backend\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-06-27T00:54:53.340Z] Serving at port 8770
+
+[debug] [2023-06-27T00:54:54.514Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-06-27T00:54:54.525Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/bookclubapp-41e2d/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/bookclubapp-41e2d/us-central1/api)."}}
+=======
+[debug] [2023-06-27T00:55:17.922Z] Building nodejs source
+[debug] [2023-06-27T00:55:17.922Z] Failed to find version of module node: reached end of search path /Users/baileycytacki-lewis/Desktop/BookClubApp/backend/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "19". Using node@19 from host. 
+[debug] [2023-06-27T00:55:17.924Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-06-27T00:55:17.928Z] Found firebase-functions binary at '/Users/baileycytacki-lewis/Desktop/BookClubApp/backend/functions/node_modules/.bin/firebase-functions'
+[debug] [2023-06-27T00:55:18.051Z] Serving at port 8176
+
+[debug] [2023-06-27T00:55:18.348Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-06-27T00:55:18.351Z] shutdown requested via /__/quitquitquit
+
+[info] ✔  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] ✔  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/bookclubapp-41e2d/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/bookclubapp-41e2d/us-central1/api)."}}
+>>>>>>> c4be7c6e842ddad5d006b0df103476bcfcf0247e
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+<<<<<<< HEAD
+[debug] [2023-06-27T00:54:57.025Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T00:54:57.025Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T00:54:57.025Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T00:54:57.025Z"],"workRunningCount":1}
+[debug] [2023-06-27T00:54:57.026Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T00:54:57.028Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T00:54:57.029Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T00:54:57.054Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2023-06-27T00:54:57.056Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2023-06-27T00:54:59.658Z] [runtime-status] [12460] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.9.0","resolution":"C:\\Users\\kateg\\OneDrive\\Desktop\\GC\\BookClubApp2\\BookClubApp\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12460] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.9.0\",\"resolution\":\"C:\\\\Users\\\\kateg\\\\OneDrive\\\\Desktop\\\\GC\\\\BookClubApp2\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-06-27T00:54:59.659Z] [runtime-status] [12460] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\kateg\\OneDrive\\Desktop\\GC\\BookClubApp2\\BookClubApp\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12460] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\kateg\\\\OneDrive\\\\Desktop\\\\GC\\\\BookClubApp2\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-06-27T00:54:59.659Z] [runtime-status] [12460] Found local functions config: C:\Users\kateg\OneDrive\Desktop\GC\BookClubApp2\BookClubApp\backend\functions/.runtimeconfig.json {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12460] Found local functions config: C:\\Users\\kateg\\OneDrive\\Desktop\\GC\\BookClubApp2\\BookClubApp\\backend\\functions/.runtimeconfig.json"}}
+[debug] [2023-06-27T00:54:59.660Z] [runtime-status] [12460] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12460] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-06-27T00:54:59.662Z] [runtime-status] [12460] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\kateg\\OneDrive\\Desktop\\GC\\BookClubApp2\\BookClubApp\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12460] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\kateg\\\\OneDrive\\\\Desktop\\\\GC\\\\BookClubApp2\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-06-27T00:55:00.078Z] [runtime-status] [12460] Checked functions.config() {"config":{"mongodb":{"uri":"mongodb+srv://joanewolf:-zh5y.bGxScP-9L@gc.i0v1sqx.mongodb.net/BookClub"}}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12460] Checked functions.config() {\"config\":{\"mongodb\":{\"uri\":\"mongodb+srv://joanewolf:-zh5y.bGxScP-9L@gc.i0v1sqx.mongodb.net/BookClub\"}}}"}}
+[debug] [2023-06-27T00:55:00.079Z] [runtime-status] [12460] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\kateg\\OneDrive\\Desktop\\GC\\BookClubApp2\\BookClubApp\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12460] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\kateg\\\\OneDrive\\\\Desktop\\\\GC\\\\BookClubApp2\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-06-27T00:55:00.080Z] [runtime-status] [12460] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\kateg\\OneDrive\\Desktop\\GC\\BookClubApp2\\BookClubApp\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12460] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\kateg\\\\OneDrive\\\\Desktop\\\\GC\\\\BookClubApp2\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-06-27T00:55:00.082Z] [runtime-status] [12460] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.9.0","resolution":"C:\\Users\\kateg\\OneDrive\\Desktop\\GC\\BookClubApp2\\BookClubApp\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12460] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.9.0\",\"resolution\":\"C:\\\\Users\\\\kateg\\\\OneDrive\\\\Desktop\\\\GC\\\\BookClubApp2\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-06-27T00:55:00.088Z] [runtime-status] [12460] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\kateg\\OneDrive\\Desktop\\GC\\BookClubApp2\\BookClubApp\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12460] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\kateg\\\\OneDrive\\\\Desktop\\\\GC\\\\BookClubApp2\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-06-27T00:55:00.089Z] [runtime-status] [12460] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.9.0","resolution":"C:\\Users\\kateg\\OneDrive\\Desktop\\GC\\BookClubApp2\\BookClubApp\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12460] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.9.0\",\"resolution\":\"C:\\\\Users\\\\kateg\\\\OneDrive\\\\Desktop\\\\GC\\\\BookClubApp2\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-06-27T00:55:00.419Z] [runtime-status] [12460] Functions runtime initialized. {"cwd":"C:\\Users\\kateg\\OneDrive\\Desktop\\GC\\BookClubApp2\\BookClubApp\\backend\\functions","node_version":"18.16.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12460] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\kateg\\\\OneDrive\\\\Desktop\\\\GC\\\\BookClubApp2\\\\BookClubApp\\\\backend\\\\functions\",\"node_version\":\"18.16.0\"}"}}
+[debug] [2023-06-27T00:55:00.419Z] [runtime-status] [12460] Listening to port: \\?\pipe\fire_emu_08d47c4c3334760c {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [12460] Listening to port: \\\\?\\pipe\\fire_emu_08d47c4c3334760c"}}
+[debug] [2023-06-27T00:55:00.447Z] [worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: IDLE"}}
+[debug] [2023-06-27T00:55:00.448Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T00:55:00.451Z] [worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: BUSY"}}
+[debug] [2023-06-27T00:55:01.279Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 828.0346ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 828.0346ms"}}
+[debug] [2023-06-27T00:55:01.282Z] [worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: IDLE"}}
+[debug] [2023-06-27T00:55:01.282Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T00:55:01.283Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T00:55:01.283Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T00:55:01.287Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T00:55:01.287Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T00:55:01.287Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T00:55:01.287Z"],"workRunningCount":1}
+[debug] [2023-06-27T00:55:01.287Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T00:55:01.290Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T00:55:01.291Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T00:55:01.292Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T00:55:01.296Z] [worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: BUSY"}}
+[debug] [2023-06-27T00:55:01.374Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 77.6273ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 77.6273ms"}}
+[debug] [2023-06-27T00:55:01.377Z] [worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: IDLE"}}
+[debug] [2023-06-27T00:55:01.377Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T00:55:01.377Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T00:55:01.378Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T00:55:07.831Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T00:55:07.830Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T00:55:07.832Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T00:55:07.830Z"],"workRunningCount":1}
+[debug] [2023-06-27T00:55:07.833Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T00:55:07.836Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T00:55:07.837Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T00:55:07.838Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T00:55:07.840Z] [worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: BUSY"}}
+[debug] [2023-06-27T00:55:07.908Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 67.9364ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 67.9364ms"}}
+[debug] [2023-06-27T00:55:07.909Z] [worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: IDLE"}}
+[debug] [2023-06-27T00:55:07.910Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T00:55:07.911Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T00:55:07.911Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T00:55:07.913Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T00:55:07.913Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T00:55:07.913Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T00:55:07.913Z"],"workRunningCount":1}
+[debug] [2023-06-27T00:55:07.914Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T00:55:07.916Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T00:55:07.916Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T00:55:07.917Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T00:55:07.918Z] [worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: BUSY"}}
+[debug] [2023-06-27T00:55:07.978Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 60.2882ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 60.2882ms"}}
+[debug] [2023-06-27T00:55:07.980Z] [worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-cfc4580c-83f5-463c-ac1a-0d4025570a22]: IDLE"}}
+[debug] [2023-06-27T00:55:07.980Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T00:55:07.981Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T00:55:07.981Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+=======
+>>>>>>> c4be7c6e842ddad5d006b0df103476bcfcf0247e
+=======
+>>>>>>> 83e2f8471f5c4864602fc029fb8578391e7e3c0a

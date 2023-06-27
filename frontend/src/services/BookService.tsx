@@ -26,5 +26,6 @@ export function searchBooks(query: string): Promise<Book[]> {
 export function bookDetails(id: string): Promise<any> {
   return axios
     .get(`https://www.googleapis.com/books/v1/volumes/${id}`)
-    .then(response => response.data)
+    .then((response) => response.data);
+  
 }

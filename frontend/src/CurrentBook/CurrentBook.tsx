@@ -1,4 +1,4 @@
-import { Book } from "../models/Book";
+
 import NoImage from "../assets/NoImage.png";
 import "./CurrentBook.css";
 

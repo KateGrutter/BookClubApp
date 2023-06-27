@@ -8,7 +8,7 @@ import { NewUserForm } from "./components/NewUser/NewUserForm";
 import { User } from "./models/User";
 import { MemberList } from "./components/MemberList";
 import { PastReads } from "./components/PastReads";
-import { ProfilePage } from "./components/ProfilePage/ProfilePage";
+import { BookDetails } from "./components/BookDetails";
 
 function App() {
   return (
@@ -55,6 +55,7 @@ function App() {
 
         {/* Route for past reads */}
         <Route path="/past-reads" element={<PastReads />} />
+        <Route path="/book-details/:id" element={<BookDetails />} />
       </Routes>
     </div>
   );
