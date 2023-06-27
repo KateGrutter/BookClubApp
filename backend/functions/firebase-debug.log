@@ -318,3 +318,339 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [info] +  functions: Using node@18 from host. 
 [debug] [2023-06-27T22:16:37.417Z] Could not find functions.yaml. Must use http discovery
 [debug] [2023-06-27T22:16:37.430Z] Found firebase-functions binary at 'C:\Users\joane\OneDrive\Desktop\finalProject\BookClubApp\backend\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-06-27T22:20:19.243Z] ----------------------------------------------------------------------
+[debug] [2023-06-27T22:20:19.247Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\joane\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2023-06-27T22:20:19.248Z] CLI Version:   12.3.1
+[debug] [2023-06-27T22:20:19.248Z] Platform:      win32
+[debug] [2023-06-27T22:20:19.249Z] Node Version:  v18.16.0
+[debug] [2023-06-27T22:20:19.250Z] Time:          Tue Jun 27 2023 18:20:19 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-06-27T22:20:19.250Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-27T22:20:19.455Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-27T22:20:19.456Z] > authorizing via signed-in user (joanewolf@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2023-06-27T22:20:19.475Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-27T22:20:19.476Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2023-06-27T22:20:19.502Z] [hub] writing locator at C:\Users\joane\AppData\Local\Temp\hub-bookclubapp-41e2d.json
+[debug] [2023-06-27T22:20:19.561Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-27T22:20:19.562Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2023-06-27T22:20:19.562Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[debug] [2023-06-27T22:20:19.577Z] defaultcredentials: writing to file C:\Users\joane\AppData\Roaming\firebase\joanewolf_gmail_com_application_default_credentials.json
+[debug] [2023-06-27T22:20:19.624Z] Setting GAC to C:\Users\joane\AppData\Roaming\firebase\joanewolf_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\joane\\AppData\\Roaming\\firebase\\joanewolf_gmail_com_application_default_credentials.json"}}
+[debug] [2023-06-27T22:20:19.630Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/bookclubapp-41e2d/adminSdkConfig [none]
+[debug] [2023-06-27T22:20:19.922Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/bookclubapp-41e2d/adminSdkConfig 403
+[debug] [2023-06-27T22:20:19.922Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/bookclubapp-41e2d/adminSdkConfig {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-06-27T22:20:19.923Z] Failed to get Admin SDK config for bookclubapp-41e2d, falling back to cache Failed to get Admin SDK for Firebase project bookclubapp-41e2d. Please make sure the project exists and your account has permission to access it. {"name":"FirebaseError","children":[],"exit":2,"message":"Failed to get Admin SDK for Firebase project bookclubapp-41e2d. Please make sure the project exists and your account has permission to access it.","original":{"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}},"response":{"statusCode":403}},"exit":1,"message":"HTTP Error: 403, The caller does not have permission","status":403},"status":500}
+[warn] !  functions: Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect. {"metadata":{"emulator":{"name":"functions"},"message":"Unable to fetch project Admin SDK configuration, Admin SDK behavior in Cloud Functions emulator may be incorrect."}}
+[debug] [2023-06-27T22:20:19.993Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2023-06-27T22:20:19.994Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2023-06-27T22:20:19.994Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\joane\\.cache\\firebase\\emulators\\ui-v1.11.6\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\joane\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.6\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2023-06-27T22:20:20.291Z] Web / API server started at 127.0.0.1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
+[debug] [2023-06-27T22:20:20.292Z] Web / API server started at ::1:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
+[info] i  functions: Watching "C:\Users\joane\OneDrive\Desktop\finalProject\BookClubApp\backend\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\joane\\OneDrive\\Desktop\\finalProject\\BookClubApp\\backend\\functions\" for Cloud Functions..."}}
+[debug] [2023-06-27T22:20:20.558Z] Validating nodejs source
+[debug] [2023-06-27T22:20:23.270Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "mongodb": "^5.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1"
+  },
+  "private": true
+}
+[debug] [2023-06-27T22:20:23.271Z] Building nodejs source
+[debug] [2023-06-27T22:20:23.272Z] Failed to find version of module node: reached end of search path C:\Users\joane\OneDrive\Desktop\finalProject\BookClubApp\backend\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2023-06-27T22:20:23.276Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-06-27T22:20:23.288Z] Found firebase-functions binary at 'C:\Users\joane\OneDrive\Desktop\finalProject\BookClubApp\backend\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-06-27T22:20:23.781Z] Serving at port 8609
+
+[debug] [2023-06-27T22:20:24.801Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-06-27T22:20:24.815Z] shutdown requested via /__/quitquitquit
+
+[info] +  functions: Loaded functions definitions from source: api. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: api."}}
+[info] +  functions[us-central1-api]: http function initialized (http://127.0.0.1:5001/bookclubapp-41e2d/us-central1/api). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/bookclubapp-41e2d/us-central1/api)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at 127.0.0.1:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2023-06-27T22:25:26.177Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:26.177Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:26.178Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:26.177Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:26.180Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T22:25:26.188Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:26.189Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T22:25:26.202Z] [worker-pool] addWorker(us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-api)"}}
+[debug] [2023-06-27T22:25:26.204Z] [worker-pool] Adding worker with key us-central1-api, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-api, total=1"}}
+[debug] [2023-06-27T22:25:29.052Z] [runtime-status] [15748] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.9.0","resolution":"C:\\Users\\joane\\OneDrive\\Desktop\\finalProject\\BookClubApp\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15748] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.9.0\",\"resolution\":\"C:\\\\Users\\\\joane\\\\OneDrive\\\\Desktop\\\\finalProject\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-06-27T22:25:29.055Z] [runtime-status] [15748] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\joane\\OneDrive\\Desktop\\finalProject\\BookClubApp\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15748] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\joane\\\\OneDrive\\\\Desktop\\\\finalProject\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-06-27T22:25:29.056Z] [runtime-status] [15748] Found local functions config: C:\Users\joane\OneDrive\Desktop\finalProject\BookClubApp\backend\functions/.runtimeconfig.json {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15748] Found local functions config: C:\\Users\\joane\\OneDrive\\Desktop\\finalProject\\BookClubApp\\backend\\functions/.runtimeconfig.json"}}
+[debug] [2023-06-27T22:25:29.056Z] [runtime-status] [15748] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15748] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2023-06-27T22:25:29.058Z] [runtime-status] [15748] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\joane\\OneDrive\\Desktop\\finalProject\\BookClubApp\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15748] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\joane\\\\OneDrive\\\\Desktop\\\\finalProject\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-06-27T22:25:29.664Z] [runtime-status] [15748] Checked functions.config() {"config":{"mongodb":{"uri":"mongodb+srv://joanewolf:-zh5y.bGxScP-9L@gc.i0v1sqx.mongodb.net/BookClub"}}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15748] Checked functions.config() {\"config\":{\"mongodb\":{\"uri\":\"mongodb+srv://joanewolf:-zh5y.bGxScP-9L@gc.i0v1sqx.mongodb.net/BookClub\"}}}"}}
+[debug] [2023-06-27T22:25:29.664Z] [runtime-status] [15748] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\joane\\OneDrive\\Desktop\\finalProject\\BookClubApp\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15748] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\joane\\\\OneDrive\\\\Desktop\\\\finalProject\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}}"}}
+[debug] [2023-06-27T22:25:29.666Z] [runtime-status] [15748] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\joane\\OneDrive\\Desktop\\finalProject\\BookClubApp\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15748] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\joane\\\\OneDrive\\\\Desktop\\\\finalProject\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-06-27T22:25:29.668Z] [runtime-status] [15748] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.9.0","resolution":"C:\\Users\\joane\\OneDrive\\Desktop\\finalProject\\BookClubApp\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15748] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.9.0\",\"resolution\":\"C:\\\\Users\\\\joane\\\\OneDrive\\\\Desktop\\\\finalProject\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2023-06-27T22:25:29.674Z] [runtime-status] [15748] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.4.1","resolution":"C:\\Users\\joane\\OneDrive\\Desktop\\finalProject\\BookClubApp\\backend\\functions\\node_modules\\firebase-functions\\lib\\v1\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15748] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.4.1\",\"resolution\":\"C:\\\\Users\\\\joane\\\\OneDrive\\\\Desktop\\\\finalProject\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\v1\\\\index.js\"}"}}
+[debug] [2023-06-27T22:25:29.675Z] [runtime-status] [15748] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.9.0","resolution":"C:\\Users\\joane\\OneDrive\\Desktop\\finalProject\\BookClubApp\\backend\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15748] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.9.0\",\"resolution\":\"C:\\\\Users\\\\joane\\\\OneDrive\\\\Desktop\\\\finalProject\\\\BookClubApp\\\\backend\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2023-06-27T22:25:30.275Z] [runtime-status] [15748] Functions runtime initialized. {"cwd":"C:\\Users\\joane\\OneDrive\\Desktop\\finalProject\\BookClubApp\\backend\\functions","node_version":"18.16.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15748] Functions runtime initialized. {\"cwd\":\"C:\\\\Users\\\\joane\\\\OneDrive\\\\Desktop\\\\finalProject\\\\BookClubApp\\\\backend\\\\functions\",\"node_version\":\"18.16.0\"}"}}
+[debug] [2023-06-27T22:25:30.276Z] [runtime-status] [15748] Listening to port: \\?\pipe\fire_emu_406863d60bd40e1f {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[runtime-status] [15748] Listening to port: \\\\?\\pipe\\fire_emu_406863d60bd40e1f"}}
+[debug] [2023-06-27T22:25:30.380Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:30.381Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:30.382Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:31.322Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 939.8858ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 939.8858ms"}}
+[debug] [2023-06-27T22:25:31.323Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:31.324Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:31.324Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:31.324Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:31.326Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:31.326Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:31.327Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:31.326Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:31.327Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T22:25:31.333Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:31.334Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T22:25:31.334Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:31.335Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:31.386Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 51.3ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 51.3ms"}}
+[debug] [2023-06-27T22:25:31.387Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:31.387Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:31.387Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:31.387Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:33.897Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/usersundefined-2023-06-27T22:25:33.897Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:33.898Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/usersundefined-2023-06-27T22:25:33.897Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:33.898Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/usersundefined --> us-central1-api
+[debug] [2023-06-27T22:25:33.905Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:33.905Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/usersundefined, mapping to path=/usersundefined {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/usersundefined, mapping to path=/usersundefined"}}
+[debug] [2023-06-27T22:25:33.905Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:33.906Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:33.913Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 7.1124ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 7.1124ms"}}
+[debug] [2023-06-27T22:25:33.914Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:33.914Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:33.915Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:33.915Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:33.916Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/usersundefined-2023-06-27T22:25:33.916Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:33.916Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/usersundefined-2023-06-27T22:25:33.916Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:33.916Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/usersundefined --> us-central1-api
+[debug] [2023-06-27T22:25:33.925Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:33.925Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/usersundefined, mapping to path=/usersundefined {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/usersundefined, mapping to path=/usersundefined"}}
+[debug] [2023-06-27T22:25:33.926Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:33.927Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:33.933Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 6.5429ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 6.5429ms"}}
+[debug] [2023-06-27T22:25:33.934Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:33.934Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:33.934Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:33.935Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:36.302Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:36.302Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:36.302Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:36.302Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:36.302Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T22:25:36.309Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:36.309Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T22:25:36.309Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:36.310Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:36.360Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 50.4093ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 50.4093ms"}}
+[debug] [2023-06-27T22:25:36.361Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:36.362Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:36.362Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:36.362Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:36.363Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:36.363Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:36.363Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:36.363Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:36.364Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T22:25:36.371Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:36.371Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T22:25:36.371Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:36.372Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:36.421Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 49.2701ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 49.2701ms"}}
+[debug] [2023-06-27T22:25:36.423Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:36.423Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:36.423Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:36.423Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:40.023Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:40.023Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:40.024Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:40.023Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:40.024Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T22:25:40.030Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:40.031Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T22:25:40.031Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:40.033Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:40.084Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 51.421ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 51.421ms"}}
+[debug] [2023-06-27T22:25:40.085Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:40.085Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:40.085Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:40.085Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:40.091Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:40.091Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:40.092Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:40.091Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:40.093Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T22:25:40.100Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:40.101Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T22:25:40.101Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:40.102Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:40.148Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 46.1967ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 46.1967ms"}}
+[debug] [2023-06-27T22:25:40.149Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:40.150Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:40.150Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:40.150Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:40.254Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/usersundefined-2023-06-27T22:25:40.254Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:40.254Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/usersundefined-2023-06-27T22:25:40.254Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:40.256Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/usersundefined --> us-central1-api
+[debug] [2023-06-27T22:25:40.263Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:40.263Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/usersundefined, mapping to path=/usersundefined {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/usersundefined, mapping to path=/usersundefined"}}
+[debug] [2023-06-27T22:25:40.264Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:40.264Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:40.268Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 4.1896ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 4.1896ms"}}
+[debug] [2023-06-27T22:25:40.269Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:40.269Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:40.270Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:40.270Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:40.272Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/usersundefined-2023-06-27T22:25:40.271Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:40.272Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/usersundefined-2023-06-27T22:25:40.271Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:40.272Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/usersundefined --> us-central1-api
+[debug] [2023-06-27T22:25:40.278Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:40.279Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/usersundefined, mapping to path=/usersundefined {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/usersundefined, mapping to path=/usersundefined"}}
+[debug] [2023-06-27T22:25:40.279Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:40.280Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:40.285Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 4.7355ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 4.7355ms"}}
+[debug] [2023-06-27T22:25:40.286Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:40.286Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:40.286Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:40.287Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:45.006Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:45.006Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:45.007Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:45.006Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:45.007Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T22:25:45.016Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:45.016Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T22:25:45.016Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:45.017Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:45.065Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 48.3675ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 48.3675ms"}}
+[debug] [2023-06-27T22:25:45.066Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:45.067Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:45.067Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:45.067Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:45.070Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:45.070Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:45.070Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:45.070Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:45.070Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T22:25:45.079Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:45.079Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T22:25:45.080Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:45.081Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:45.136Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 55.6953ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 55.6953ms"}}
+[debug] [2023-06-27T22:25:45.137Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:45.137Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:45.137Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:45.138Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:46.918Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/usersundefined-2023-06-27T22:25:46.918Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:46.918Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/usersundefined-2023-06-27T22:25:46.918Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:46.918Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/usersundefined --> us-central1-api
+[debug] [2023-06-27T22:25:46.927Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:46.928Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/usersundefined, mapping to path=/usersundefined {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/usersundefined, mapping to path=/usersundefined"}}
+[debug] [2023-06-27T22:25:46.928Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:46.929Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:46.934Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 5.5975ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 5.5975ms"}}
+[debug] [2023-06-27T22:25:46.935Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:46.936Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:46.936Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:46.936Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:46.938Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/usersundefined-2023-06-27T22:25:46.938Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:46.939Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/usersundefined-2023-06-27T22:25:46.938Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:46.940Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/usersundefined --> us-central1-api
+[debug] [2023-06-27T22:25:46.946Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:46.946Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/usersundefined, mapping to path=/usersundefined {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/usersundefined, mapping to path=/usersundefined"}}
+[debug] [2023-06-27T22:25:46.946Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:46.947Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:46.952Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 5.4212ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 5.4212ms"}}
+[debug] [2023-06-27T22:25:46.953Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:46.953Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:46.954Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:46.954Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:52.240Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:52.240Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:52.240Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:52.240Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:52.240Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T22:25:52.248Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:52.248Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T22:25:52.248Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:52.249Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:52.305Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 56.2628ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 56.2628ms"}}
+[debug] [2023-06-27T22:25:52.306Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:52.306Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:52.307Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:52.307Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:52.309Z] [work-queue] {"queuedWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:52.309Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2023-06-27T22:25:52.309Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/bookclubapp-41e2d/us-central1/api/users-2023-06-27T22:25:52.309Z"],"workRunningCount":1}
+[debug] [2023-06-27T22:25:52.309Z] Accepted request GET /bookclubapp-41e2d/us-central1/api/users --> us-central1-api
+[debug] [2023-06-27T22:25:52.317Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2023-06-27T22:25:52.317Z] [functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/bookclubapp-41e2d/us-central1/api/users, mapping to path=/users"}}
+[debug] [2023-06-27T22:25:52.317Z] [worker-pool] submitRequest(triggerId=us-central1-api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-api)"}}
+[info] i  functions: Beginning execution of "us-central1-api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Beginning execution of \"us-central1-api\""}}
+[debug] [2023-06-27T22:25:52.318Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: BUSY"}}
+[debug] [2023-06-27T22:25:52.364Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-api" in 45.9182ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finished \"us-central1-api\" in 45.9182ms"}}
+[debug] [2023-06-27T22:25:52.365Z] [worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"[worker-us-central1-api-93487d08-1907-4beb-80a8-89c7d6dc22a2]: IDLE"}}
+[debug] [2023-06-27T22:25:52.365Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2023-06-27T22:25:52.365Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-api"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2023-06-27T22:25:52.365Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}

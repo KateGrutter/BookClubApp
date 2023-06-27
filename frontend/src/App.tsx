@@ -9,6 +9,8 @@ import { User } from "./models/User";
 import { MemberList } from "./components/MemberList";
 import { PastReads } from "./components/PastReads";
 import { BookDetails } from "./components/BookDetails";
+import { ProfilePage } from "./components/ProfilePage/ProfilePage";
+
 
 function App() {
   return (
