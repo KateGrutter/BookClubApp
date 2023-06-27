@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { Header } from "../Header/Header";
 
 export function ProfilePage() {
-  const id = useParams().id;
+  const id = useParams()._id;
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {

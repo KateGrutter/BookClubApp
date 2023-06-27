@@ -13,7 +13,7 @@ export function MemberList() {
       <Header />
       <h3>Members</h3>
       {users.map((user: User) => (
-        <ul key={user._id}>
+        <ul>
           <li key={user._id}>
             <Link to={`/users/${user._id}`}>
               Name: {user.firstname} {user.lastname}
