@@ -1,13 +1,17 @@
 
+import { useContext } from "react";
 import NoImage from "../assets/NoImage.png";
 import "./CurrentBook.css";
+import BookContext from "../contexts/BookContext";
 
 export function CurrentBook() {
+
+  const {currentBook} = useContext(BookContext);
   return (
     <div className="current-book">
-      <h3>Current Read: Once Upon a Wardrobe</h3>
+      <h3>Current Read: {currentBook?.title}</h3>
       <div>
-        <img src={NoImage} alt="No image found" />
+        <img src={NoImage} alt="" />
       </div>
     </div>
   );

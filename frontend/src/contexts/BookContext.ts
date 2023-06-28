@@ -5,19 +5,17 @@ import { Book } from "../models/Book";
 
 
 interface BookContextModel {
-    pastBooks: Book[];
-    // currentBook: Book;
-    addPastBook: (book: Book) => void,
-    // setCurrent: (book:Book) => void
+    listBooks: Book[];
+    currentBook: Book | undefined;
+    addListBook: (book: Book) => void,
+    setCurrent: (book:Book) => void
 }
 
 const defaultValue: BookContextModel = {
-    pastBooks: [],
-    // currentBook: {
-    //     title: title,
-    // },
-    addPastBook: () => {},
-    // setCurrent: () => {}
+    listBooks: [],
+    currentBook: undefined,
+    addListBook: () => {},
+    setCurrent: () => {}
 };
 
 const BookContext = createContext(defaultValue);

@@ -5,18 +5,18 @@ import BookContext from "./BookContext";
 interface Props { children: ReactNode;}
 
 export default function BookContextProvider({children}: Props) {
-    const [pastBooks, setPastBooks] = useState<Book[]>([]);
-    // const [currentBook, setCurrentBook] = useState<Book>();
+    const [listBooks, setListBooks] = useState<Book[]>([]);
+    const [currentBook, setCurrentBook] = useState<Book | undefined>();
 
-    function addPastBook(book: Book): void {
-        setPastBooks(prev => [...prev, book]);
+    function addListBook(book: Book): void {
+        setListBooks(listBooks => [...listBooks, book]);
     }
-    // function setCurrent(book: Book): void {
-    //     setCurrentBook(book);
-    // }
+    function setCurrent(book: Book): void {
+        setCurrentBook(book);
+    }
 
     return(
-        <BookContext.Provider value={{pastBooks, addPastBook}}>
+        <BookContext.Provider value={{listBooks, addListBook, currentBook, setCurrent}}>
             {children}
         </BookContext.Provider>
     )

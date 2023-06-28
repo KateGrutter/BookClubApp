@@ -5,8 +5,8 @@ import { useParams } from "react-router-dom";
 import { Header } from "../Header/Header";
 
 export function ProfilePage() {
-  const id = useParams()._id;
-  const [user, setUser] = useState<User | null>(null);
+  const id = useParams().id;
+  const [user, setUser] = useState<User>();
 
   useEffect(() => {
     getUserById(id!).then((data) => setUser(data));
@@ -15,17 +15,17 @@ export function ProfilePage() {
   return (
     <div id="member-list">
       <Header />
-      {user ? (
+      {/* {user ? ( */}
         <div>
           <h1>
-            {user.firstname} {user.lastname}
+            {user?.firstname} {user?.lastname}
           </h1>
-          <h3>Username: {user.username}</h3>
-          <h3>Member since: {user.membersince}</h3>
+          <h3>Username: {user?.username}</h3>
+          <h3>Member since: {user?.membersince}</h3>
         </div>
-      ) : (
-        <p>Loading user data...</p>
-      )}
+      {/* ) : ( */}
+        {/* <p>Loading user data...</p> */}
+      {/* )} */}
     </div>
   );
 }

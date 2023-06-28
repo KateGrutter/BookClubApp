@@ -15,7 +15,7 @@ export function MemberList() {
       {users.map((user: User) => (
         <ul>
           <li key={user._id}>
-            <Link to={`/users/${user._id}`}>
+            <Link to={`/users/${user._id}`} key={user._id}>
               Name: {user.firstname} {user.lastname}
             </Link>
           </li>

@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
@@ -11,7 +11,9 @@ import { PastReads } from "./components/PastReads";
 import { BookDetails } from "./components/BookDetails";
 import { ProfilePage } from "./components/ProfilePage/ProfilePage";
 
+
 function App() {
+
   return (
     <div className="App">
       <Routes>
@@ -56,7 +58,7 @@ function App() {
 
         {/* Route for past reads */}
         <Route path="/past-reads" element={<PastReads />} />
-        <Route path="/book-details/:id" element={<BookDetails />} />
+        <Route path="/book-details/:id" element={<BookDetails/>} />
       </Routes>
     </div>
   );
