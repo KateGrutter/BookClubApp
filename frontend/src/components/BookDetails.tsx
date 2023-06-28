@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import { bookDetails} from "../services/BookService";
 import { Link } from "react-router-dom";
 import BookContext from "../contexts/BookContext";
-import { Book } from "../models/Book";
 
 
 

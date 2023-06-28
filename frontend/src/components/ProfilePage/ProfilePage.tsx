@@ -3,10 +3,11 @@ import { User } from "../../models/User";
 import { getUserById } from "../../services/ExpressService";
 import { useParams } from "react-router-dom";
 import { Header } from "../Header/Header";
+// import { User } from "../../../../backend/functions/src/models/User"
 
 export function ProfilePage() {
   const id = useParams().id;
-  const [user, setUser] = useState<User>();
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
     getUserById(id!).then((data) => setUser(data));

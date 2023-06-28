@@ -13,16 +13,13 @@ import "./BookClubHome.css";
 
 export function BookClubHome() {
   const [books, setBooks] = useState<Book[]>([]);
-  const [meeting, setMeeting] = useState<Meeting>({
-    date: "June 25",
-    time: "11:00am",
-    location: "6854 Woodbrook Dr SE",
-    information: 'Please join us for brunch to discuss "Once Upon a Wardrobe"',
-  });
+  const [meetings, setMeetings] = useState<Meeting[]>([]);
 
   function onAdd(newMeeting: Meeting) {
-    setMeeting(newMeeting);
+    setMeetings([...meetings, newMeeting]);
   }
+
+  const lastMeeting = meetings[meetings.length - 1]
 
   return (
     <div className="book-club-home">
@@ -35,7 +32,7 @@ export function BookClubHome() {
       <div className="feed-item">
         <div className="meeting-form">
           <MeetingForm onAdd={(meeting: Meeting) => onAdd(meeting)} />
-          <NextMeeting meeting={meeting} />
+          <NextMeeting meeting={lastMeeting} />
         </div>
       </div>
       <div className="feed-item">

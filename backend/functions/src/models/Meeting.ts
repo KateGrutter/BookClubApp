@@ -1,5 +1,7 @@
+import { ObjectId } from "mongodb";
+
 export interface Meeting {
-    _id?: string,
+    _id?: ObjectId,
     date: string,
     time: string,
     location: string,
