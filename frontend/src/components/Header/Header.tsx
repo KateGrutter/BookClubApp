@@ -15,12 +15,18 @@ export function Header() {
       </div>
 
       <div>
-        <input className="side-menu" type="checkbox" id="side-menu" />
+        <input
+          className="side-menu"
+          type="checkbox"
+          id="side-menu"
+          checked={isMenuOpen}
+          onChange={() => setIsMenuOpen(!isMenuOpen)}
+        />
         <label className="hamb" htmlFor="side-menu">
           <span className="hamb-line"></span>
         </label>
       </div>
-      <div className="nav">
+      <div className={isMenuOpen ? "nav" : "nav hidden"}>
         <ul className="menu">
           <li>
             <Link to="/feed">Home</Link>
