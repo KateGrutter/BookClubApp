@@ -122,19 +122,19 @@ Hide the nav when checkbox is not checked .side-menu:not(:checked) ~ .nav {
 /* Responsiveness */
 @media screen and (min-width: 768px) {
   .nav {
-    max-height: none;
     top: 0;
+    display: flex;
+    flex-direction: row;
     position: relative;
     float: right;
-    width: fit-content;
     background-color: transparent;
-    display: row;
   }
-  .menu li {
+  .menu a {
     float: left;
+    color: var(--dark-green);
   }
-  .menu li:hover {
-    background-color: transparent;
+  .menu a:hover {
+    background-color: var(--sage-green);
     color: var(--silver);
   }
 
