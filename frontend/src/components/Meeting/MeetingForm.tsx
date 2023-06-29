@@ -9,6 +9,10 @@ export function MeetingForm(props: { onAdd: (meeting: Meeting) => void }) {
   const [information, setInformation] = useState("");
   const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
 
+function buttonText() {
+  return isFormOpen ? "Close" : "Add Next Meeting"
+}
+
   function onSubmit(e: any) {
     e.preventDefault();
 
@@ -55,7 +59,7 @@ export function MeetingForm(props: { onAdd: (meeting: Meeting) => void }) {
         </form>)}
       </div>
       <div className="addMeetingButton">
-        <button onClick={() => setIsFormOpen(!isFormOpen)}>Add New Meeting</button>
+        <button onClick={() => setIsFormOpen(!isFormOpen)}>{buttonText()}</button>
         
       </div>
     </div>
