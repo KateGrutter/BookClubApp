@@ -36,10 +36,16 @@ export function Login() {
             <Link to="/new-user">New User?</Link>
           </p>
           <button className="button">Login</button>
+<<<<<<< HEAD
+          
+=======
           <button onClick={GoogleLogin}><img className="google-logo" src={googleLogo} />Sign in with Google</button>
           <button onClick={signOut}>Sign out</button>
+>>>>>>> af8814293f78fc40cbd54a650a5ff52beda2ce8d
         </form>
       </div>
+      <button onClick={signInWithGoogle}>Sign in with Google</button>
+          <button onClick={signOut}>Sign out</button>
       <p>
         <Link to="/feed">bypass login</Link>
       </p>
