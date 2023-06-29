@@ -1,4 +1,4 @@
-import { CurrentBook } from "../CurrentBook/CurrentBook";
+import { CurrentBook } from "./CurrentBook/CurrentBook";
 // import { DiscussionBoard } from "./DiscussionBoard/DiscussionBoard";
 import { useState } from "react";
 import { SearchBar } from "./SearchBar/SearchBar";

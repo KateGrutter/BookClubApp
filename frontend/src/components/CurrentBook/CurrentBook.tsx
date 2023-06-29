@@ -1,8 +1,7 @@
 
 import { useContext } from "react";
-import NoImage from "../assets/NoImage.png";
 import "./CurrentBook.css";
-import BookContext from "../contexts/BookContext";
+import BookContext from "../../contexts/BookContext";
 
 export function CurrentBook() {
 
@@ -11,7 +10,7 @@ export function CurrentBook() {
     <div className="current-book">
       <h3>Current Read: {currentBook?.title}</h3>
       <div>
-        <img src={NoImage} alt="" />
+        {/* <img src="" alt="" /> */}
       </div>
     </div>
   );
