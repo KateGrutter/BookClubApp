@@ -6,3 +6,9 @@ export function addMeeting(meeting: Meeting) {
         .post(`http://127.0.0.1:5001/bookclubapp-41e2d/us-central1/api/pastmeetings`, meeting)
         .then(response => response.data)
 }
+
+export function getMeeting(meeting: Meeting) {
+    return axios
+    .get(`http://127.0.0.1:5001/bookclubapp-41e2d/us-central1/api/pastmeetings`)
+    .then(response => response.data.length -1)
+}
