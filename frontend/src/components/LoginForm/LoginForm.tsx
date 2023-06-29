@@ -17,10 +17,10 @@ export function Login() {
     const existingUser = getUserByEmail(user?.email!).then((res) => {setThisUser(res)})
   })
 
-  async function GoogleLogin() {
-    let googleUser = signInWithGoogle()
-    setThisUser(await getUserByEmail(googleUser.email))
-  }
+  // async function GoogleLogin() {
+  //   let googleUser = signInWithGoogle()
+  //   setThisUser(await getUserByEmail(googleUser.email))
+  // }
   
   
   return (

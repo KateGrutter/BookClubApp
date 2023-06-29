@@ -1,27 +1,26 @@
 import express from "express";
-import { getClient } from "../db";
-// import { ObjectId } from "mongodb";
 import { Book } from "../models/Book";
-const pastBookRouter = express.Router();
+import { getClient } from "../db";
 
-// const meetings: Meeting[] = [];
+export const bookRouter = express.Router();
 
-const errorResponse = (error: any, res: any) => {
-    console.error("FAIL", error);
-    res.status(500).json({
-        message: "Internal server error",
-    })
-};
-
-pastBookRouter.get("/booksread", async (req, res) => {
+bookRouter.get('/booksread', async (req, res) => {
     try {
         const client = await getClient();
-        const meetings = await client.db().collection<Book>("booksread").find().toArray();
-        res.status(200).json(meetings);
+        const books = await client.db().collection<Book>('booksread').find().toArray();
+        res.json(books);
     } catch (err) {
-        errorResponse(err, res);
+        console.error("ERROR", err);
+        res.status(500).json({ message: "internal Server Error" });
     }
 });
 
 
-export default pastBookRouter;
+bookRouter.post('/booksread', async (req, res) => {
+    const book = req.body as Book;
+    const client = await getClient();
+    await client.db()
+        .collection<Book>('booksread')
+        .insertOne(book);
+    res.status(201).json(book)
+});

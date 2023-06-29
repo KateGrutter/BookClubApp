@@ -1,11 +1,11 @@
 import express from "express";
 import { getClient } from "../db";
-import { ObjectId } from "mongodb";
+// import { ObjectId } from "mongodb";
 import { Meeting } from "../models/Meeting";
 
 const meetingRouter = express.Router();
 
-const meetings: Meeting[] = [];
+// const meetings: Meeting[] = [];
 
 const errorResponse = (error: any, res: any) => {
     console.error("FAIL", error);
@@ -24,15 +24,24 @@ meetingRouter.get("/pastmeetings", async (req, res) => {
     }
 });
 
-meetingRouter.post("/users", async (req, res) => {
-    try {
-        const newMeeting: Meeting = req.body;
-        newMeeting._id = new ObjectId();
-        meetings.push(newMeeting);
-        res.status(201).json(newMeeting);
-    } catch (err) {
-        errorResponse(err, res);
-    }
+// meetingRouter.post("/pastmeetings", async (req, res) => {
+//     try {
+//         const newMeeting: Meeting = req.body;
+//         newMeeting._id = new ObjectId();
+//         meetings.push(newMeeting);
+//         res.status(201).json(newMeeting);
+//     } catch (err) {
+//         errorResponse(err, res);
+//     }
+// });
+
+meetingRouter.post('/pastmeetings', async (req, res) => {
+    const pastMeeting = req.body as Meeting;
+    const client = await getClient();
+    await client.db()
+        .collection<Meeting>('pastmeetings')
+        .insertOne(pastMeeting);
+    res.status(201).json(pastMeeting)
 });
 
 export default meetingRouter;
