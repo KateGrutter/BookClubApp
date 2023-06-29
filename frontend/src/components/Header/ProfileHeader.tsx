@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css"; // Import CSS file for styling
-import Bookmark from "../../assets/bookmark.svg";
+import ChapterChat from "../../assets/ChapterChat.svg";
 
 export function ProfileHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +10,7 @@ export function ProfileHeader() {
     <nav className="header">
       <div className="header-logo">
         <Link to="/">
-          <img src={Bookmark} alt="bookmark logo" />
+          <img src={ChapterChat} alt="ChapterChat logo" />
         </Link>
       </div>
     </nav>
