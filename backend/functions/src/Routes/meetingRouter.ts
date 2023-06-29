@@ -1,11 +1,11 @@
 import express from "express";
 import { getClient } from "../db";
-// import { ObjectId } from "mongodb";
+import { ObjectId } from "mongodb";
 import { Meeting } from "../models/Meeting";
 
 const meetingRouter = express.Router();
 
-// const meetings: Meeting[] = [];
+const meetings: Meeting[] = [];
 
 const errorResponse = (error: any, res: any) => {
     console.error("FAIL", error);
@@ -24,5 +24,15 @@ meetingRouter.get("/pastmeetings", async (req, res) => {
     }
 });
 
+meetingRouter.post("/users", async (req, res) => {
+    try {
+        const newMeeting: Meeting = req.body;
+        newMeeting._id = new ObjectId();
+        meetings.push(newMeeting);
+        res.status(201).json(newMeeting);
+    } catch (err) {
+        errorResponse(err, res);
+    }
+});
 
 export default meetingRouter;
