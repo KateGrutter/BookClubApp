@@ -23,6 +23,7 @@
 
 .header {
   align-self: flex-start;
+  height: 100px;
 }
 
 .current-read {
@@ -32,8 +33,13 @@
   align-self: flex-end;
 }
 
-.discussion {
+.meeting-form {
+  padding: 20px;
+}
+
+.discussion-board {
   align-self: center;
+  
 }
 
 .member-list {
@@ -50,4 +56,14 @@
   .current-read {
     margin-bottom: 0;
   }
+
+  .current-feed-items {
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+
+  
+
+  
 }

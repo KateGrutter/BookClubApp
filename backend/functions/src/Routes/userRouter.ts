@@ -2,8 +2,11 @@ import express from "express";
 import { getClient } from "../db";
 import { ObjectId } from "mongodb";
 import { User } from "../models/User";
+
 const userRouter = express.Router();
+
 const users: User[] = [];
+
 const errorResponse = (error: any, res: any) => {
   console.error("FAIL", error);
   res.status(500).json({

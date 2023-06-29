@@ -1,6 +1,7 @@
 import express from "express";
 import { ObjectId } from "mongodb";
 import { Post } from "../models/Post";
+import { getClient } from "../db";
 
 const postRouter = express.Router();
 
@@ -15,6 +16,8 @@ const errorResponse = (error: any, res: any) => {
 
 postRouter.get("/posts", async (req, res) => {
   try {
+    const client = await getClient();
+    const posts = await client.db().collection<Post>("posts").find()
     res.status(200).json(posts);
   } catch (err) {
     errorResponse(err, res);

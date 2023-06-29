@@ -1,0 +1,18 @@
+.post-container {
+    display: flex;
+    justify-content: center;
+}
+
+.post-button {
+    padding: 8px 16px;
+  font-size: 12px;
+  background-color: var(--outer-space);
+  color: var(--silver);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.discussion-posts {
+    display: flex;
+}

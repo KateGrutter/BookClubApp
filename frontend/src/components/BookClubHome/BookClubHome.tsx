@@ -24,16 +24,20 @@ export function BookClubHome() {
   return (
     <div className="book-club-home">
       <Header />
+     <div className="current-feed-items"> 
+     <div className="feed-item">
+        <div className="meeting-form">
+          <NextMeeting meeting={lastMeeting} />
+          <MeetingForm onAdd={(meeting: Meeting) => onAdd(meeting)} />
+          
+        </div>
+      </div>
       <div className="feed-item">
         <div className="current-read">
           <CurrentBook />
         </div>
       </div>
-      <div className="feed-item">
-        <div className="meeting-form">
-          <MeetingForm onAdd={(meeting: Meeting) => onAdd(meeting)} />
-          <NextMeeting meeting={lastMeeting} />
-        </div>
+      
       </div>
       <div className="feed-item">
         <div className="discussion-board">

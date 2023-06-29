@@ -3,6 +3,7 @@ import { Post } from "../../models/Post"
 import { PostForm } from "./PostForm"
 import { UserPost } from "./UserPost"
 import Modal from "react-modal"
+import "./DiscussionBoard.css"
 
 
 export function DiscussionBoard() {

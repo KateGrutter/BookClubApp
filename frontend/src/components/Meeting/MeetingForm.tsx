@@ -58,10 +58,10 @@ function buttonText() {
           <button type="submit">Set Next Meeting</button>
         </form>)}
       </div>
-      <div className="addMeetingButton">
-        <button onClick={() => setIsFormOpen(!isFormOpen)}>{buttonText()}</button>
+
+        <button className="addMeetingButton" onClick={() => setIsFormOpen(!isFormOpen)}>{buttonText()}</button>
         
-      </div>
+      
     </div>
   );
 }

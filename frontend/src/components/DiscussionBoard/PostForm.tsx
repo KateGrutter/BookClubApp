@@ -24,7 +24,7 @@ export function PostForm(props: { onSubmitForm: (post: Post) => void} ) {
             <form onSubmit={handleFormSubmit}>
 
             <textarea value={thought} onChange={e => setThought(e.target.value)}></textarea>
-            <button>Post</button>
+            <button className="post-button">Post</button>
             </form>
         </div>
     )

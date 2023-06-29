@@ -18,7 +18,7 @@ export function BookClubHome() {
   return (
     <div>
       <Header></Header>
-      <CurrentBook />
+      <div><CurrentBook /></div>
       <DiscussionBoard></DiscussionBoard>
       <SearchBar
         onSearch={(searchResults: Book[]) => setBooks(searchResults)}
