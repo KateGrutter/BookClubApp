@@ -1,13 +1,20 @@
-import { useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Post } from "../../models/Post"
 import { PostForm } from "./PostForm"
 import { UserPost } from "./UserPost"
 import Modal from "react-modal"
 import "./DiscussionBoard.css"
+import BookContext from "../../contexts/BookContext"
+import { getPost } from "../../services/PostService"
 
 
 export function DiscussionBoard() {
     const [posts, setPosts] = useState<Post[]>([])
+    const {listPosts, addListPost} = useContext(BookContext);
+
+    useEffect(() => {
+        getPost().then((data) => addListPost(data))
+    }, [])
     
     
     return (
@@ -16,7 +23,7 @@ export function DiscussionBoard() {
             <PostForm onSubmitForm={(newPost: Post) => setPosts([...posts, newPost])}></PostForm>
             <div className="post-container">
                 {
-                    posts.map((post, i) => <UserPost post={post} key={i}></UserPost>)
+                    listPosts.map(post => <UserPost post={post}></UserPost>)
                 }
             </div>
            
