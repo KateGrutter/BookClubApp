@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import "./CurrentBook.css";
 import BookContext from "../../contexts/BookContext";
-import NoImage from "/Users/maggiewernet/Desktop/BookClub/BookClubApp/frontend/src/assets/NoImage.png";
+import NextBook from "/Users/maggiewernet/Desktop/BookClub/BookClubApp/frontend/src/assets/NextBook.png";
 
 export function CurrentBook() {
   const { currentBook } = useContext(BookContext);
@@ -9,7 +9,10 @@ export function CurrentBook() {
     <div className="current-book">
       <h3>Current Read: {currentBook?.title}</h3>
       <div>
-        <img src={currentBook?.imageLinks.thumbnail} alt="book cover" />
+        <img
+          src={currentBook?.imageLinks.thumbnail || NextBook}
+          alt="bookcover"
+        />
       </div>
     </div>
   );
