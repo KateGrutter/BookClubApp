@@ -2,11 +2,13 @@ import { User } from 'firebase/auth';
 import { createContext } from 'react';
 
 export interface AuthContextModel {
-    user: User|null;
+    currentUser: User|null;
+    setCurrentUser: (user: User) => void
 };
 
 const defaultValue: AuthContextModel = {
-    user: null
+    currentUser: null,
+    setCurrentUser: () => {}
 };
 
 const AuthContext = createContext(defaultValue);

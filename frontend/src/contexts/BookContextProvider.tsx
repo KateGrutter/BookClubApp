@@ -29,7 +29,7 @@ export default function BookContextProvider({children}: Props) {
         setCurrentUser(user)
     }
     return(
-        <BookContext.Provider value={{listBooks, addListBook, currentBook, setCurrent, listPosts, addListPost, currentUser, addCurrentUser}}>
+        <BookContext.Provider value={{listBooks, addListBook, currentBook, setCurrent, listPosts, addListPost}}>
             {children}
         </BookContext.Provider>
     )

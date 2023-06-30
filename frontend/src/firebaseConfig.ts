@@ -2,6 +2,7 @@ import {initializeApp} from "firebase/app"
 import {getAuth, signInWithPopup, GoogleAuthProvider, User} from "firebase/auth"
 import { useContext } from "react";
 import BookContext from "./contexts/BookContext";
+import AuthContext from "./AuthContext";
 
 const firebaseConfig = {
     apiKey: "AIzaSyA4fT_QEop1nENLFFUmAzPgmy8lJGxSEiU",
@@ -19,27 +20,28 @@ const firebaseConfig = {
 
   export const auth = getAuth(app);
   const authProvider = new GoogleAuthProvider();
-  const {currentUser} = useContext(BookContext)
+  
 
-  // export function signInWithGoogle(): void {
-  //   signInWithPopup(auth, authProvider)
-  //       .then((result) => {
-  //           // This gives you a Google Access Token. You can use it to access the Google API.
-  //   const credential = GoogleAuthProvider.credentialFromResult(result);
-  //   const token = credential!.accessToken;
-  //   // The signed-in user info.
-  //   const user = result.user;
-  //   // IdP data available using getAdditionalUserInfo(result)
-  //   // ...
-  //       })
+  export function signInWithGoogle() {
+   return signInWithPopup(auth, authProvider)
+        .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential!.accessToken;
+    // The signed-in user info.
+    const user = result.user;
+    // IdP data available using getAdditionalUserInfo(result)
+    // ...
+    return user
+        })
 
-  //       return (currentUser?.username)
-  // };
+        
+  };
 
-  export async function signInWithGoogle():Promise<User> {
-    const googleUser = await signInWithPopup(auth, authProvider);
-    return googleUser.user
-  }
+  // export async function signInWithGoogle():Promise<User> {
+  //   const googleUser = await signInWithPopup(auth, authProvider);
+  //   return googleUser.user
+  // }
 
   export function signOut(): void {
     auth.signOut()

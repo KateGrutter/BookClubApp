@@ -4,17 +4,17 @@ import { auth } from "./firebaseConfig"
 import AuthContext from './AuthContext';
 
 function AuthContextProvider({children}: {children: ReactNode}) {
-    const [user, setUser] = useState<User|null>(null);
+    const [currentUser, setCurrentUser] = useState<User|null>(null);
 
 
 useEffect(() => {
     return auth.onAuthStateChanged(newUser => {
-        setUser(newUser)
+        setCurrentUser(newUser)
     });
 }, []);
 
 return (
-    <AuthContext.Provider value={{user}}>
+    <AuthContext.Provider value={{currentUser, setCurrentUser}}>
         {children}
         </AuthContext.Provider>
 );

@@ -1,6 +1,6 @@
 import { CurrentBook } from "../CurrentBook/CurrentBook";
 // import { DiscussionBoard } from "./DiscussionBoard/DiscussionBoard";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { SearchBar } from "../SearchBar/SearchBar";
 import { SearchResults } from "../SearchBar/SearchResults";
 import { DiscussionBoard } from "../DiscussionBoard/DiscussionBoard";
@@ -10,10 +10,12 @@ import { NextMeeting } from "../Meeting/NextMeeting";
 import { Meeting } from "../../models/Meeting";
 import { MeetingForm } from "../Meeting/MeetingForm";
 import "./BookClubHome.css";
+import AuthContext from "../../AuthContext";
 
 export function BookClubHome() {
   const [books, setBooks] = useState<Book[]>([]);
   const [meetings, setMeetings] = useState<Meeting[]>([]);
+  const {currentUser} = useContext(AuthContext)
 
   function onAdd(newMeeting: Meeting) {
     setMeetings([...meetings, newMeeting]);
@@ -24,7 +26,8 @@ export function BookClubHome() {
   return (
     <div className="book-club-home">
       <Header />
-     <div className="current-feed-items"> 
+     <div className="current-feed-items">
+      <p>Welcome {currentUser?.displayName}</p> 
      <div className="feed-item">
         <div className="meeting-form">
           <NextMeeting meeting={lastMeeting} />

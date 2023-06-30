@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import AuthContext from "../AuthContext";
 
-const {user} = useContext(AuthContext);
+const {currentUser} = useContext(AuthContext);
 
-<p>UID: {user?.uid}</p>;
-<p>Display name: {user?.displayName}</p>;
-<p>Email: {user?.email}</p>;
+<p>UID: {currentUser?.uid}</p>;
+<p>Display name: {currentUser?.displayName}</p>;
+<p>Email: {currentUser?.email}</p>;

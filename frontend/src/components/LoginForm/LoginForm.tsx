@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ProfileHeader } from "../Header/ProfileHeader";
 import "./LoginForm.css";
 import { signInWithGoogle, signOut } from "../../firebaseConfig";
@@ -10,17 +10,13 @@ import googleLogo from "../../assets/googleLogo.png"
 
 export function Login() {
   
-  const { user } = useContext(AuthContext)
-  const [thisUser, setThisUser] = useState<User>()
+  const { setCurrentUser } = useContext(AuthContext)
+  const navigate = useNavigate();
+  // const [thisUser, setThisUser] = useState<User>()
 
   useEffect(() => {
-    const existingUser = getUserByEmail(user?.email!).then((res) => {setThisUser(res)})
+    // const existingUser = getUserByEmail(user?.email!).then((res) => {setThisUser(res)})
   }, [])
-
-  // async function GoogleLogin() {
-  //   let googleUser = signInWithGoogle()
-  //   setThisUser(await getUserByEmail(googleUser.email))
-  // }
   
   
   return (
@@ -39,7 +35,11 @@ export function Login() {
           
         </form>
       </div>
-      <button onClick={signInWithGoogle().then(user => addCurrentUser(user))}>Sign in with Google</button>
+      <button onClick={() => signInWithGoogle().then(user => 
+      {console.log(user);
+        setCurrentUser(user);  
+        navigate("/feed");
+        })}>Sign in with Google</button>
           <button onClick={signOut}>Sign out</button>
       <p>
         <Link to="/feed">bypass login</Link>
