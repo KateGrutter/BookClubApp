@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Post } from "../../models/Post";
+import { addPost } from "../../services/PostService";
 
 
 
@@ -11,11 +12,12 @@ export function PostForm(props: { onSubmitForm: (post: Post) => void} ) {
     function handleFormSubmit(e: any) {
         e.preventDefault();
 
-        const post = {
-            userName, thought
+        const newPost = {
+            userName, 
+            thought: thought
         };
         setThought('');
-        props.onSubmitForm(post);
+        addPost(newPost).then((data) => props.onSubmitForm(data))
     }
     
     return(
