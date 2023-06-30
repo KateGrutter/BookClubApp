@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import "./CurrentBook.css";
 import BookContext from "../../contexts/BookContext";
-import NextBook from "/Users/maggiewernet/Desktop/BookClub/BookClubApp/frontend/src/assets/NextBook.png";
+import NextBook from "../../assets/NextBook.png";
 
 export function CurrentBook() {
   const { currentBook } = useContext(BookContext);

@@ -15,7 +15,7 @@ export function Login() {
 
   useEffect(() => {
     const existingUser = getUserByEmail(user?.email!).then((res) => {setThisUser(res)})
-  })
+  }, [])
 
   // async function GoogleLogin() {
   //   let googleUser = signInWithGoogle()
@@ -39,7 +39,7 @@ export function Login() {
           
         </form>
       </div>
-      <button onClick={signInWithGoogle}>Sign in with Google</button>
+      <button onClick={signInWithGoogle().then(user => addCurrentUser(user))}>Sign in with Google</button>
           <button onClick={signOut}>Sign out</button>
       <p>
         <Link to="/feed">bypass login</Link>

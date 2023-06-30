@@ -12,7 +12,9 @@ interface BookContextModel {
     listPosts: Post[];
     addListPost: (post: Post) => void;
     addListBook: (book: Book) => void,
-    setCurrent: (book:Book) => void
+    setCurrent: (book:Book) => void,
+    currentUser: User | undefined,
+    addCurrentUser: (user: User) => void
 }
 
 
@@ -23,7 +25,9 @@ const defaultValue: BookContextModel = {
     addListBook: () => {},
     setCurrent: () => {},
     listPosts: [],
-    addListPost: () => {}
+    addListPost: () => {},
+    currentUser: undefined,
+    addCurrentUser: () => {}
 };
 
 
