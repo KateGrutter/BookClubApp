@@ -41,15 +41,13 @@ postRouter.get("/posts/:id", async (req, res) => {
   }
 });
 
-postRouter.post("/posts", async (req, res) => {
-  try {
-    const newPost: Post = req.body;
-    newPost._id = new ObjectId();
-    posts.push(newPost);
-    res.status(201).json(newPost);
-  } catch (err) {
-    errorResponse(err, res);
-  }
+postRouter.post('/posts', async (req, res) => {
+  const newPost = req.body as Post;
+  const client = await getClient();
+  await client.db()
+    .collection<Post>('posts')
+    .insertOne(newPost);
+  res.status(201).json(newPost)
 });
 
 postRouter.put("/posts/:id", async (req, res) => {
