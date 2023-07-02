@@ -36,13 +36,21 @@ ul {
 }
 .header-logo {
   display: inline-block;
-  margin-left: 10px;
 }
 .header-logo img {
   position: absolute;
   top: 0px;
   width: 250px;
-  height: auto;
+  height: 100%;
+}
+.header-logo h1 {
+  color: var(--battleship-grey);
+  font-size: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-40%);
+  margin-bottom: 5px;
 }
 /* Nav menu or header links */
 
@@ -132,14 +140,7 @@ ul {
     background-color: var(--dark-green);
   }
 
-  /* .menu a {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    color: var(--silver);
+  .header-logo h1 {
+    font-size: 50px;
   }
-  .menu a:hover {
-    background-color: var(--sage-green);
-    color: var(--silver);
-  } */
 }
