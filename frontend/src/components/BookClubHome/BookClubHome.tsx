@@ -24,8 +24,10 @@ export function BookClubHome() {
   const lastMeeting = meetings[meetings.length - 1];
 
   return (
+  <div>
+  <Header />
     <div className="page-container">
-      <Header />
+      
       <div className="book-club-home">
         <div className="feed-item">
           <div className="welcome-user">
@@ -62,6 +64,7 @@ export function BookClubHome() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
