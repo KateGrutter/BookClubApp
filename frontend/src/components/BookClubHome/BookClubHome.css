@@ -7,6 +7,12 @@
   --silver: #c5c5c5;
 }
 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .book-club-home {
   max-width: 768px;
   margin: 0 auto;
