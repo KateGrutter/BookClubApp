@@ -3,13 +3,14 @@ import "./NextMeeting.css";
 
 export function NextMeeting(props: { meeting: Meeting }) {
   return (
-    <div>
-      <h4>You are invited</h4>
-      <p>
-        When? {props.meeting?.date} at {props.meeting?.time}
+    <div className="next-meeting">
+      <h4>You're Invited!</h4>
+      <p className="meeting-date">
+        Join us for an upcoming event on {props.meeting?.date} at{" "}
+        {props.meeting?.time}.
       </p>
-      <p>Where? {props.meeting?.location}</p>
-      <p>Details: {props.meeting?.information}</p>
+      <p>Location: {props.meeting?.location}</p>
+      <p>Additional Details: {props.meeting?.information}</p>
     </div>
   );
 }

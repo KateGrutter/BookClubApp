@@ -1,35 +1,26 @@
-:root {
-  --outer-space: #4c5b61;
-  --battleship-grey: #829191;
-  --sage-green: #949b96;
-  --white: #f9f9f9;
-  --dark-green: #2c423f;
-  --silver: #c5c5c5;
-} /* variables*/
-
 .results {
   margin-top: 20px;
 }
 
 .results h2 {
-  font-size: 20px;
+  color: #4c5b61;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
-.results button {
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-
-  padding: 10px;
-  margin: 5px 0;
-  cursor: pointer;
+.results p {
+  color: #829191;
+  font-size: 16px;
 }
 
-.results button:hover {
-  background-color: var(--sage-green);
+.results a {
+  display: block;
+  color: #2c423f;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.results a:hover {
+  color: #949b96;
+  text-decoration: underline;
 }

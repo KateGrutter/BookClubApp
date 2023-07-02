@@ -9,9 +9,9 @@ export function MeetingForm(props: { onAdd: (meeting: Meeting) => void }) {
   const [information, setInformation] = useState("");
   const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
 
-function buttonText() {
-  return isFormOpen ? "Close" : "Add Next Meeting"
-}
+  function buttonText() {
+    return isFormOpen ? "Close" : "Add Next Meeting";
+  }
 
   function onSubmit(e: any) {
     e.preventDefault();
@@ -28,40 +28,45 @@ function buttonText() {
   return (
     <div>
       <div className="form-container">
-
         {isFormOpen && (
-        <form onSubmit={(e) => onSubmit(e)}>
-          <label htmlFor="date">Date</label>
-          <input
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            type="text"
-          />
-          <label htmlFor="time">Time</label>
-          <input
-            value={time}
-            onChange={(e) => setTime(e.target.value)}
-            type="text"
-          />
-          <label htmlFor="location">Location</label>
-          <input
-            value={location}
-            onChange={(e) => setLocation(e.target.value)}
-            type="text"
-          />
-          <label htmlFor="additional-info">Additional Information:</label>
-          <input
-            value={information}
-            onChange={(e) => setInformation(e.target.value)}
-            type="text"
-          />
-          <button type="submit">Set Next Meeting</button>
-        </form>)}
+          <form onSubmit={(e) => onSubmit(e)}>
+            <label htmlFor="date">Date</label>
+            <input
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+              type="text"
+            />
+            <label htmlFor="time">Time</label>
+            <input
+              value={time}
+              onChange={(e) => setTime(e.target.value)}
+              type="text"
+            />
+            <label htmlFor="location">Location</label>
+            <input
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+              type="text"
+            />
+            <label htmlFor="additional-info">Additional Information:</label>
+            <input
+              value={information}
+              onChange={(e) => setInformation(e.target.value)}
+              type="text"
+            />
+            <button className="submit" type="submit">
+              Set Next Meeting
+            </button>
+          </form>
+        )}
       </div>
 
-        <button className="addMeetingButton" onClick={() => setIsFormOpen(!isFormOpen)}>{buttonText()}</button>
-        
-      
+      <button
+        className="addMeetingButton"
+        onClick={() => setIsFormOpen(!isFormOpen)}
+      >
+        {buttonText()}
+      </button>
     </div>
   );
 }

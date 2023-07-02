@@ -15,51 +15,51 @@ import AuthContext from "../../AuthContext";
 export function BookClubHome() {
   const [books, setBooks] = useState<Book[]>([]);
   const [meetings, setMeetings] = useState<Meeting[]>([]);
-  const {currentUser} = useContext(AuthContext)
+  const { currentUser } = useContext(AuthContext);
 
   function onAdd(newMeeting: Meeting) {
     setMeetings([...meetings, newMeeting]);
   }
 
-  const lastMeeting = meetings[meetings.length - 1]
+  const lastMeeting = meetings[meetings.length - 1];
 
   return (
-    <div className="book-club-home">
+    <div className="page-container">
       <Header />
-     <div className="current-feed-items">
-      <p>Welcome {currentUser?.displayName}</p> 
-     <div className="feed-item">
-        <div className="meeting-form">
-          <NextMeeting meeting={lastMeeting} />
-          <MeetingForm onAdd={(meeting: Meeting) => onAdd(meeting)} />
-          
+      <div className="book-club-home">
+        <div className="feed-item">
+          <div className="welcome-user">
+            <h2>Welcome {currentUser?.displayName}</h2>
+            <p className="welcome-message">
+              We're excited to have you here in our book club community. Get
+              ready to discover new books, engage in discussions, and connect
+              with fellow book lovers.
+            </p>
+          </div>
+          <div className="feed-item">
+            <div className="current-read">
+              <CurrentBook />
+            </div>
+            <div className="feed-item">
+              <div className="meeting-form">
+                <NextMeeting meeting={lastMeeting} />
+                <MeetingForm onAdd={(meeting: Meeting) => onAdd(meeting)} />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="feed-item">
-        <div className="current-read">
-          <CurrentBook />
+        <div className="feed-item">
+          <div className="discussion-board">
+            <DiscussionBoard />
+          </div>
         </div>
-      </div>
-      
-      </div>
-      <div className="feed-item">
-        <div className="discussion-board">
-          <DiscussionBoard />
-        </div>
-      </div>
-      <div className="feed-item">
-        <div className="member-list">{/* <MemberList /> */}</div>
-      </div>
-      <div className="feed-item">
-        <div>
-          <SearchBar
-            onSearch={(searchResults: Book[]) => setBooks(searchResults)}
-          />
-        </div>
-      </div>
-      <div className="feed-item">
-        <div>
-          <SearchResults Books={books} />
+        <div className="feed-item">
+          <div className="searchbar">
+            <SearchBar
+              onSearch={(searchResults: Book[]) => setBooks(searchResults)}
+            />
+            <SearchResults Books={books} />
+          </div>
         </div>
       </div>
     </div>

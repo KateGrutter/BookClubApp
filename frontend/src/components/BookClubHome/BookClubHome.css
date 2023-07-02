@@ -1,69 +1,74 @@
-.feed-item {
+:root {
+  --outer-space: #4c5b61;
+  --battleship-grey: #829191;
+  --sage-green: #949b96;
+  --white: #f9f9f9;
+  --dark-green: #2c423f;
+  --silver: #c5c5c5;
+}
+
+.page-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  align-items: center;
 }
 
-.current-read,
-.meeting-details,
-.discussion,
-.member-list,
-.search-bar,
-.search-results {
+.book-club-home {
+  max-width: 768px;
+  margin: 0 auto;
   padding: 20px;
 }
-.current-read {
+
+.welcome-user {
   margin-bottom: 20px;
 }
 
-.section-title {
-  font-size: 20px;
+.welcome-user h2 {
+  color: var(--outer-space);
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
-.header {
-  align-self: flex-start;
-  height: 100px;
-}
-
-.current-read {
-  align-self: flex-start;
-}
-.meeting-details {
-  align-self: flex-end;
+.welcome-message {
+  color: var(--battleship-grey);
+  font-size: 16px;
 }
 
 .meeting-form {
-  padding: 20px;
+  margin-top: 20px;
+}
+
+.current-read {
+  margin-top: 20px;
 }
 
 .discussion-board {
-  align-self: center;
-  
+  margin-top: 20px;
 }
 
-.member-list {
-  align-self: flex-end;
+.searchbar {
+  margin-top: 20px;
+}
+
+.search-results {
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 768px) {
-  .feed-item {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
+  .book-club-home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
-  .current-read {
-    margin-bottom: 0;
+  .welcome-user {
+    grid-column: 1 / span 2;
   }
 
-  .current-feed-items {
-    display: flex;
-    justify-content: space-evenly;
-    
+  .meeting-form,
+  .current-read,
+  .discussion-board,
+  .searchbar {
+    margin-top: 0;
   }
-
-  
-
-  
 }

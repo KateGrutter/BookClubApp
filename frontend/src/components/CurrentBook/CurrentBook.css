@@ -1,13 +1,45 @@
+:root {
+  --outer-space: #4c5b61;
+  --battleship-grey: #829191;
+  --sage-green: #949b96;
+  --white: #f9f9f9;
+  --dark-green: #2c423f;
+  --silver: #c5c5c5;
+}
+
 .current-book {
-  display: flex;
-  flex-direction: column;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .current-book h3 {
+  font-size: 24px;
   margin-bottom: 10px;
+  color: var(--sage-green);
+}
+
+.current-book p {
+  margin-bottom: 10px;
+  color: var(--silver);
+}
+
+.current-book .title {
+  font-size: medium;
+  font-weight: bold;
+}
+
+.current-book .author {
+  font-size: small;
+  font-style: italic;
 }
 
 .current-book img {
-  max-width: 200px;
-  max-height: 200px;
+  width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.current-book .description {
+  color: var(--battleship-grey);
+  font-size: small;
 }

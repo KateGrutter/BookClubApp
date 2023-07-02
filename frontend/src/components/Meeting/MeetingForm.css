@@ -1,47 +1,54 @@
+:root {
+  --outer-space: #4c5b61;
+  --battleship-grey: #829191;
+  --sage-green: #949b96;
+  --white: #f9f9f9;
+  --dark-green: #2c423f;
+  --silver: #c5c5c5;
+}
+
 .form-container {
+  margin-bottom: 20px;
+}
+
+.form-container form {
   display: flex;
   flex-direction: column;
-  max-width: 300px;
-  margin: 20px auto;
-  padding-top: 20px;
 }
 
 .form-container label {
-  margin-bottom: 10px;
-  color: var(--dark-green);
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .form-container input {
-  border: 1px solid var(--silver);
   margin-bottom: 10px;
   padding: 5px;
-  border-radius: 4px;
+  border: 1px solid var(--silver);
+  border-radius: 3px;
 }
 
-.form-container button {
-  padding: 8px 16px;
-  font-size: 12px;
-  background-color: var(--outer-space);
-  color: var(--silver);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.form-container button:hover {
-  background-color: var(--sage-green);
-}
 .addMeetingButton {
-  padding: 8px 16px;
-  font-size: 12px;
-  background-color: var(--outer-space);
-  color: var(--silver);
+  background-color: var(--sage-green);
+  color: var(--white);
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  padding: 10px 20px;
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
-  .form-container {
-    max-width: 500px;
-  }
+.addMeetingButton:hover {
+  background-color: var(--dark-green);
+}
+.submit {
+  background-color: var(--sage-green);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.submit {
+  background-color: var(--dark-green);
 }

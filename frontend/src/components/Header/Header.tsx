@@ -1,18 +1,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css"; // Import CSS file for styling
-import logo from "../../assets/bookmarklogo.svg";
-
+import ChapterChat from "../../assets/ChapterChat.svg";
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <nav className="header">
       <div className="header-logo">
-        <img src={logo} alt="chapterChat logo" />
-        <h1>ChapterChat</h1>
+        <Link to="/">
+          <img src={ChapterChat} alt="ChapterChat logo" />
+        </Link>
       </div>
-
       <div>
         <input
           className="side-menu"

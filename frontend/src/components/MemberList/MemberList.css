@@ -1,0 +1,43 @@
+:root {
+  --outer-space: #4c5b61;
+  --battleship-grey: #829191;
+  --sage-green: #949b96;
+  --white: #f9f9f9;
+  --dark-green: #2c423f;
+  --silver: #c5c5c5;
+}
+#member-list {
+  margin: 0;
+}
+
+#member-list h3 {
+  margin-top: 30px;
+  color: #4c5b61;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#member-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#member-list li {
+  margin-bottom: 10px;
+}
+
+#member-list li a {
+  color: #2c423f;
+  text-decoration: none;
+}
+
+#member-list li a:hover {
+  color: #949b96;
+}
+
+@media screen and (min-width: 768px) {
+  #member-list {
+    max-width: 400px;
+    margin-left: 5px;
+  }
+}

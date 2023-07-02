@@ -7,13 +7,16 @@ export function CurrentBook() {
   const { currentBook } = useContext(BookContext);
   return (
     <div className="current-book">
-      <h3>Current Read: {currentBook?.title}</h3>
+      <h3>This Months Book</h3>
+      <p className="title">{currentBook?.title}</p>
+      <p className="author">{currentBook?.authors}</p>
       <div>
         <img
           src={currentBook?.imageLinks.thumbnail || NextBook}
           alt="bookcover"
         />
       </div>
+      <p className="description">{currentBook?.description}</p>
     </div>
   );
 }

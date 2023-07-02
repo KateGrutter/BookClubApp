@@ -1,0 +1,39 @@
+:root {
+  --outer-space: #4c5b61;
+  --battleship-grey: #829191;
+  --sage-green: #949b96;
+  --white: #f9f9f9;
+  --dark-green: #2c423f;
+  --silver: #c5c5c5;
+} /* variables */
+
+.post-form {
+  background-color: var(--white);
+  border: 1px solid var(--battleship-grey);
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.post-form-textarea-post {
+  width: 100%;
+  height: 100px;
+  resize: none;
+  border: 1px solid var(--battleship-grey);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.post-form-button {
+  background-color: var(--sage-green);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.post-form-button:hover {
+  background-color: var(--outer-space);
+}

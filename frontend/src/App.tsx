@@ -1,4 +1,3 @@
-
 import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
@@ -6,14 +5,12 @@ import { BookClubHome } from "./components/BookClubHome/BookClubHome";
 import { Login } from "./components/LoginForm/LoginForm";
 import { NewUserForm } from "./components/NewUser/NewUserForm";
 import { User } from "./models/User";
-import { MemberList } from "./components/MemberList";
-import { PastReads } from "./components/PastReads";
-import { BookDetails } from "./components/BookDetails";
+import { MemberList } from "./components/MemberList/MemberList";
+import { PastReads } from "./components/PastReads/PastReads";
+import { BookDetails } from "./components/BookDetails/BookDetails";
 import { ProfilePage } from "./components/ProfilePage/ProfilePage";
 
-
 function App() {
-
   return (
     <div className="App">
       <Routes>
@@ -58,7 +55,7 @@ function App() {
 
         {/* Route for past reads */}
         <Route path="/past-reads" element={<PastReads />} />
-        <Route path="/book-details/:id" element={<BookDetails/>} />
+        <Route path="/book-details/:id" element={<BookDetails />} />
       </Routes>
     </div>
   );

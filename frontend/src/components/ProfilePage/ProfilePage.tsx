@@ -3,7 +3,8 @@ import { User } from "../../models/User";
 import { getUserById } from "../../services/ExpressService";
 import { useParams } from "react-router-dom";
 import { Header } from "../Header/Header";
-// import { User } from "../../../../backend/functions/src/models/User"
+import ProfileImage from "../../assets/ProfileImage.png";
+import "./ProfilePage.css";
 
 export function ProfilePage() {
   const id = useParams().id;
@@ -14,19 +15,18 @@ export function ProfilePage() {
   }, [id]);
 
   return (
-    <div id="member-list">
+    <div id="member-list-container">
       <Header />
-      {/* {user ? ( */}
-        <div>
-          <h1>
-            {user?.firstname} {user?.lastname}
-          </h1>
-          <h3>Username: {user?.username}</h3>
-          <h3>Member since: {user?.membersince}</h3>
-        </div>
-      {/* ) : ( */}
-        {/* <p>Loading user data...</p> */}
-      {/* )} */}
+
+      <div id="member-list">
+        <h1>
+          {user?.firstname} {user?.lastname}
+        </h1>
+        <img src={ProfileImage} alt="Profile Image" />
+        <p>Username: {user?.username}</p>
+        <p>Email: {user?.email}</p>
+        <p>Member since: {user?.membersince}</p>
+      </div>
     </div>
   );
 }

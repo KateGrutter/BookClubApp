@@ -1,0 +1,37 @@
+:root {
+  --outer-space: #4c5b61;
+  --battleship-grey: #829191;
+  --sage-green: #949b96;
+  --white: #f9f9f9;
+  --dark-green: #2c423f;
+  --silver: #c5c5c5;
+}
+.past-reads {
+  margin: 20px;
+}
+.past-reads h2 {
+  color: var(--outer-space);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.past-reads p {
+  color: var(--dark-green);
+  margin-bottom: 20px;
+}
+
+.past-reads ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.past-reads li {
+  color: var(--dark-green);
+  margin-bottom: 5px;
+  font-style: bold;
+}
+.book-author {
+  font-style: italic;
+  color: var(--sage-green);
+}
