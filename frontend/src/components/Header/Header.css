@@ -35,15 +35,23 @@ body {
   width: 100%;
 }
 .header-logo {
-  display: inline-block;
-  font-size: 60px;
-  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-logo img {
+  width: 10%;
+  height: auto;
+  margin-right: 10px;
+  transform: (50px, 50px);
 }
 
-.header-logo img {
-  width: 50%;
-  height: auto;
+.header-logo h1 {
+  color: var(--battleship-grey);
+  font-size: 45px;
+  margin: 0;
 }
+
 /* Nav menu or header links */
 
 .menu a {
@@ -130,6 +138,12 @@ body {
     display: flex;
     float: right;
     background-color: var(--dark-green);
+  }
+  .header-logo h1 {
+    font-size: 60px;
+  }
+  .header-logo img {
+    width: 5%;
   }
 
   /* .menu a {
