@@ -40,15 +40,13 @@ userRouter.get("/users/:id", async (req, res) => {
     errorResponse(err, res);
   }
 });
-userRouter.post("/users", async (req, res) => {
-  try {
-    const newUser: User = req.body;
-    newUser._id = new ObjectId();
-    users.push(newUser);
-    res.status(201).json(newUser);
-  } catch (err) {
-    errorResponse(err, res);
-  }
+userRouter.post('/users', async (req, res) => {
+  const newUser = req.body as User;
+  const client = await getClient();
+  await client.db()
+    .collection<User>('users')
+    .insertOne(newUser);
+  res.status(201).json(newUser)
 });
 userRouter.put("/users/:id", async (req, res) => {
   try {
