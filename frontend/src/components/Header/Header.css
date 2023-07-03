@@ -40,10 +40,13 @@ body {
   margin-left: 10px;
 }
 
+
+
 .header-logo img {
   width: 50%;
   height: auto;
 }
+
 /* Nav menu or header links */
 
 .menu a {

@@ -9,7 +9,7 @@ export function addPost(post: Post) {
         .then(response => response.data)
 }
 
-export function getPost() {
+export function getPosts() {
     return axios
     .get(`http://127.0.0.1:5001/bookclubapp-41e2d/us-central1/api/posts`)
     .then(response => response.data)

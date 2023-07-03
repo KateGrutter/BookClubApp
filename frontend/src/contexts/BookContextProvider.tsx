@@ -15,6 +15,7 @@ export default function BookContextProvider({children}: Props) {
 
 
     function addListBook(book: Book): void {
+        console.log(book)
         setListBooks(listBooks => [...listBooks, book]);
     }
     function setCurrent(book: Book): void {
@@ -28,8 +29,16 @@ export default function BookContextProvider({children}: Props) {
     function addCurrentUser(user: User): void {
         setCurrentUser(user)
     }
+
+    function loadPosts(posts: Post[]): void {
+        setListPosts(listPosts => [...listPosts, ...posts])
+    }
+
+    function loadBooks(books: Book[]): void {
+        setListBooks(listBooks => [...listBooks, ...books])
+    }
     return(
-        <BookContext.Provider value={{listBooks, addListBook, currentBook, setCurrent, listPosts, addListPost}}>
+        <BookContext.Provider value={{loadBooks, loadPosts, listBooks, addListBook, currentBook, setCurrent, listPosts, addListPost}}>
             {children}
         </BookContext.Provider>
     )

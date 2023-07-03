@@ -1,18 +1,17 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { Post } from "../../models/Post";
 import { PostForm } from "./PostForm";
 import { UserPost } from "./UserPost";
-import Modal from "react-modal";
 import "./DiscussionBoard.css";
 import BookContext from "../../contexts/BookContext";
-import { getPost } from "../../services/PostService";
+import { getPosts } from "../../services/PostService";
 
 export function DiscussionBoard() {
   // const [posts, setPosts] = useState<Post[]>([]);
-  const { listPosts, addListPost } = useContext(BookContext);
+  const { listPosts, addListPost, loadPosts } = useContext(BookContext);
 
   useEffect(() => {
-    getPost().then((data) => addListPost(data));
+    getPosts().then((data) => loadPosts(data));
   }, []);
   console.log(listPosts)
 

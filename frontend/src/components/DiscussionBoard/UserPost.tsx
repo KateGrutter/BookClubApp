@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Post } from "../../models/Post";
 import Modal from "react-modal";
 import { PostForm } from "./PostForm";
 import { ReplyForm } from "./ReplyForm";
 import { ReplyPost } from "./ReplyPost";
 import "./UserPost.css";
+import AuthContext from "../../AuthContext";
 
 const customStyles = {
   content: {
