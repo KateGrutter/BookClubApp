@@ -9,8 +9,10 @@ export function PastReads() {
 
   useEffect(() => {
     getBooksRead().then((data) => addListBook(data));
+    
   }, []);
 
+  console.log(listBooks)
   return (
     <div>
       <Header />
