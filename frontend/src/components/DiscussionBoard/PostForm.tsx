@@ -14,7 +14,7 @@ export function PostForm(props: { onSubmitForm: (post: Post) => void }) {
       userName,
       thought: thought,
     };
-    setThought("");
+    // setThought("");
     addPost(newPost).then((data) => props.onSubmitForm(data));
   }
 

@@ -13,6 +13,8 @@ interface BookContextModel {
     addListPost: (post: Post) => void;
     addListBook: (book: Book) => void,
     setCurrent: (book:Book) => void,
+    loadPosts: (posts: Post[]) => void,
+    loadBooks: (books: Book[]) => void
     
 }
 
@@ -25,6 +27,8 @@ const defaultValue: BookContextModel = {
     setCurrent: () => {},
     listPosts: [],
     addListPost: () => {},
+    loadPosts: () => {},
+    loadBooks: () => {}
 };
 
 

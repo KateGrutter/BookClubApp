@@ -39,6 +39,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .header-logo img {
   width: 10%;
   height: auto;
@@ -51,7 +52,6 @@ body {
   font-size: 45px;
   margin: 0;
 }
-
 /* Nav menu or header links */
 
 .menu a {
