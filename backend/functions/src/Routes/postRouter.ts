@@ -17,7 +17,7 @@ const errorResponse = (error: any, res: any) => {
 postRouter.get("/posts", async (req, res) => {
   try {
     const client = await getClient();
-    const posts = await client.db().collection<Post>("posts").find()
+    const posts = await client.db().collection<Post>("posts").find().toArray()
     res.status(200).json(posts);
   } catch (err) {
     errorResponse(err, res);

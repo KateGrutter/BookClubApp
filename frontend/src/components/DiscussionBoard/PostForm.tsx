@@ -14,19 +14,19 @@ export function PostForm(props: { onSubmitForm: (post: Post) => void }) {
       userName,
       thought: thought,
     };
-    setThought("");
+    // setThought("");
     addPost(newPost).then((data) => props.onSubmitForm(data));
   }
 
   return (
     <div className="post-form">
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={(e) => handleFormSubmit(e)}>
         <textarea
           className="post-form-textarea-post"
           value={thought}
           onChange={(e) => setThought(e.target.value)}
         ></textarea>
-        <button className="post-button">Post</button>
+        <button className="post-button submit" type="submit">Post</button>
       </form>
     </div>
   );
