@@ -8,21 +8,23 @@ import BookContext from "../../contexts/BookContext";
 import { getPost } from "../../services/PostService";
 
 export function DiscussionBoard() {
-  const [posts, setPosts] = useState<Post[]>([]);
+  // const [posts, setPosts] = useState<Post[]>([]);
   const { listPosts, addListPost } = useContext(BookContext);
 
   useEffect(() => {
     getPost().then((data) => addListPost(data));
   }, []);
+  console.log(listPosts)
 
   return (
     <div className="discussion-posts">
       <PostForm
-        onSubmitForm={(newPost: Post) => setPosts([...posts, newPost])}
+        onSubmitForm={(newPost: Post) => addListPost(newPost)}
       ></PostForm>
       <div className="post-container">
-        {listPosts.map((post) => (
-          <UserPost post={post}></UserPost>
+        {listPosts.map((post, i) => (
+          <UserPost post={post} key={i}></UserPost>
+          // <UserPost post={newPost} key={i}></UserPost>
         ))}
       </div>
     </div>
