@@ -23,6 +23,7 @@ Modal.setAppElement("#root");
 export function UserPost(props: { post: Post }) {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [posts, setPosts] = useState<Post[]>([]);
+  
 
   function closeModal() {
     setIsOpen(false);
