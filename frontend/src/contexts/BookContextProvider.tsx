@@ -31,7 +31,7 @@ export default function BookContextProvider({children}: Props) {
     }
 
     function loadPosts(posts: Post[]): void {
-        setListPosts(listPosts => [...listPosts, ...posts])
+        setListPosts(posts)
     }
 
     function loadBooks(books: Book[]): void {

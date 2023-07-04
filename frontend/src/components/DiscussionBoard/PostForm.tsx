@@ -1,17 +1,19 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Post } from "../../models/Post";
 import { addPost } from "../../services/PostService";
 import "./PostForm.css";
+import AuthContext from "../../AuthContext";
 
 export function PostForm(props: { onSubmitForm: (post: Post) => void }) {
   const [userName, setUserName] = useState("");
   const [thought, setThought] = useState("");
+  const { currentUser } = useContext(AuthContext);
 
   function handleFormSubmit(e: any) {
     e.preventDefault();
 
     const newPost = {
-      userName,
+      userName: currentUser!.displayName!,
       thought: thought,
     };
     // setThought("");

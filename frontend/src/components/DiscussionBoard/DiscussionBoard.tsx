@@ -11,9 +11,9 @@ export function DiscussionBoard() {
   const { listPosts, addListPost, loadPosts } = useContext(BookContext);
 
   useEffect(() => {
-    getPosts().then((data) => loadPosts(data));
+    getPosts().then((data) => {console.log(data);loadPosts(data)});
   }, []);
-  console.log(listPosts)
+  
 
   return (
     <div className="discussion-posts">
