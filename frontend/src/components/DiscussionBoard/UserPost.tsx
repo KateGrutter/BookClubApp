@@ -33,10 +33,10 @@ export function UserPost(props: { post: Post }) {
       <h3>{props.post.userName}</h3>
       <p>{props.post.thought}</p>
       <p>{props.post.date}</p>
-      <button className="reply" onClick={() => setIsOpen(true)}>
+      {/* <button className="reply" onClick={() => setIsOpen(true)}>
         Reply
       </button>
-      {/* <button onClick={() => props.onDelete()}>Delete</button> */}
+    
       <div className="reply-container">
         {posts.map((post, i) => (
           <ReplyPost post={post} key={i}></ReplyPost>
@@ -52,7 +52,7 @@ export function UserPost(props: { post: Post }) {
           onSubmitForm={(newPost: Post) => setPosts([...posts, newPost])}
           onClose={closeModal}
         ></ReplyForm>
-      </Modal>
+      </Modal> */}
     </div>
   );
 }
