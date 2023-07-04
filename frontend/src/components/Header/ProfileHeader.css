@@ -9,17 +9,6 @@
   --silver: #c5c5c5;
 } /* variables*/
 
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  background-color: var(--white);
-  font-family: "roboto", sans-serif;
-}
-
 /* Header */
 .header {
   background-color: var(--dark-green);
@@ -28,23 +17,29 @@ body {
   top: 0;
   width: 100%;
 }
-/* Logo */
 .header-logo {
-  /* display: inline-block;
-  font-size: 60px;
-  margin-left: 10px; */
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* .header-logo img {
-  width: 35%;
+.header-logo img {
+  width: 10%;
   height: auto;
-  
-} */
+  margin-right: 10px;
+}
+
+.header-logo h1 {
+  color: var(--battleship-grey);
+  font-size: 45px;
+  margin: 0;
+}
 
 @media screen and (min-width: 768px) {
+  .header-logo h1 {
+    font-size: 60px;
+  }
   .header-logo img {
-    max-width: 400px;
-    
+    width: 5%;
   }
 }
