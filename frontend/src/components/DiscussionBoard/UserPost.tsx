@@ -23,7 +23,6 @@ Modal.setAppElement("#root");
 export function UserPost(props: { post: Post }) {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [posts, setPosts] = useState<Post[]>([]);
-  
 
   function closeModal() {
     setIsOpen(false);
@@ -33,6 +32,7 @@ export function UserPost(props: { post: Post }) {
     <div className="post">
       <h3>{props.post.userName}</h3>
       <p>{props.post.thought}</p>
+      <p>{props.post.date}</p>
       <button className="reply" onClick={() => setIsOpen(true)}>
         Reply
       </button>

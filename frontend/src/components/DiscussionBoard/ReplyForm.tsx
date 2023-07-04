@@ -7,6 +7,7 @@ export function ReplyForm(props: {
   onClose: () => void;
 }) {
   const [userName, setUserName] = useState("");
+  const [date, setDate] = useState("");
   const [thought, setThought] = useState("");
 
   function handleFormSubmit(e: any) {
@@ -15,6 +16,7 @@ export function ReplyForm(props: {
     const post = {
       userName,
       thought,
+      date,
     };
 
     props.onSubmitForm(post);

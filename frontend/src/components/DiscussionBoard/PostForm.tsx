@@ -6,6 +6,7 @@ import AuthContext from "../../AuthContext";
 
 export function PostForm(props: { onSubmitForm: (post: Post) => void }) {
   const [userName, setUserName] = useState("");
+  const [date, setDate] = useState("");
   const [thought, setThought] = useState("");
   const { currentUser } = useContext(AuthContext);
 
@@ -15,6 +16,7 @@ export function PostForm(props: { onSubmitForm: (post: Post) => void }) {
     const newPost = {
       userName: currentUser!.displayName!,
       thought: thought,
+      date: new Date().toISOString(),
     };
     // setThought("");
     addPost(newPost).then((data) => props.onSubmitForm(data));
@@ -28,7 +30,9 @@ export function PostForm(props: { onSubmitForm: (post: Post) => void }) {
           value={thought}
           onChange={(e) => setThought(e.target.value)}
         ></textarea>
-        <button className="post-button submit" type="submit">Post</button>
+        <button className="post-button submit" type="submit">
+          Post
+        </button>
       </form>
     </div>
   );
