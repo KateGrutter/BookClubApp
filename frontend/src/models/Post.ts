@@ -1,6 +1,5 @@
-
-
 export interface Post {
-    userName: string,
-    thought: string
+  userName: string;
+  thought: string;
+  date: string;
 }
