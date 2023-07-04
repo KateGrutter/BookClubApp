@@ -7,22 +7,22 @@
   --silver: #c5c5c5;
 }
 
-.form-container {
+.meeting-form-container {
   margin-bottom: 20px;
 }
 
-.form-container form {
+.meeting-form-container form {
   display: flex;
   flex-direction: column;
 }
 
-.form-container label {
+.meeting-form-container label {
   margin-bottom: 5px;
   font-size: 14px;
   font-weight: bold;
 }
 
-.form-container input {
+.meeting-form-container input {
   margin-bottom: 10px;
   padding: 5px;
   border: 1px solid var(--silver);

@@ -70,11 +70,13 @@ export function NewUserForm(props: { onAdd: (newUser: User) => void }) {
             type="text"
           />
         </label>
-        <button type="submit">Submit</button>
+        <Link className="login-form" to="/">
+          <p>Already a ChapterChat member? Log in</p>
+        </Link>
+        <Link to="/feed">
+          <button type="submit">Submit</button>
+        </Link>
       </form>
-      <p>
-        <Link to="/feed">bypass create-user form</Link>
-      </p>
     </div>
   );
 }

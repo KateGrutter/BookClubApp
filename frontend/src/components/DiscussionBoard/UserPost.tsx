@@ -31,8 +31,8 @@ export function UserPost(props: { post: Post }) {
   return (
     <div className="post">
       <h3>{props.post.userName}</h3>
-      <p>{props.post.thought}</p>
-      <p>{props.post.date}</p>
+      <p className="thought">{props.post.thought}</p>
+      <p className="date">{props.post.date}</p>
       {/* <button className="reply" onClick={() => setIsOpen(true)}>
         Reply
       </button>

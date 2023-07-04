@@ -6,16 +6,18 @@
   --dark-green: #2c423f;
   --silver: #c5c5c5;
 }
-
-:root {
-  --outer-space: #4c5b61;
-  --battleship-grey: #829191;
-  --sage-green: #949b96;
-  --white: #f9f9f9;
-  --dark-green: #2c423f;
-  --silver: #c5c5c5;
+.book-details-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
 }
-
 .book-details {
   max-width: 400px;
   margin: 0 auto;
@@ -26,7 +28,7 @@
 }
 
 .book-details-home {
-  max-width: 400px;
+  max-width: fit-content;
   margin: 10px;
   padding: 5px;
   text-align: center;
@@ -36,6 +38,9 @@
   border-radius: 5px;
   padding: 5px 10px;
   cursor: pointer;
+}
+.book-details-home:hover {
+  background-color: var(--outer-space);
 }
 
 .book-details-link {

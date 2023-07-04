@@ -7,7 +7,16 @@
   --silver: #c5c5c5;
 }
 #member-list {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
 }
 
 #member-list h3 {
@@ -37,7 +46,6 @@
 
 @media screen and (min-width: 768px) {
   #member-list {
-    max-width: 400px;
-    margin-left: 5px;
+    max-width: 768px;
   }
 }
