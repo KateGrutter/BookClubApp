@@ -16,7 +16,7 @@ export function PostForm(props: { onSubmitForm: (post: Post) => void }) {
     const newPost = {
       userName: currentUser!.displayName!,
       thought: thought,
-      date: new Date().toISOString(),
+      date: new Date().toISOString().substring(0, 10)
     };
     // setThought("");
     addPost(newPost).then((data) => props.onSubmitForm(data));
