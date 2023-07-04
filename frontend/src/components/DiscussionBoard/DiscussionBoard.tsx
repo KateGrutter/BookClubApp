@@ -21,7 +21,7 @@ export function DiscussionBoard() {
         onSubmitForm={(newPost: Post) => addListPost(newPost)}
       ></PostForm>
       <div className="post-container">
-        {listPosts.map((post, i) => (
+        {listPosts.slice(0).reverse().map((post, i) => (
           <UserPost post={post} key={i}></UserPost>
           // <UserPost post={newPost} key={i}></UserPost>
         ))}
