@@ -22,7 +22,13 @@ export function MeetingForm(props: { onAdd: (meeting: Meeting) => void }) {
       location: location,
       information: information,
     };
-    addMeeting(newMeeting).then((data) => props.onAdd(data));
+    addMeeting(newMeeting).then((data) => {
+      props.onAdd(data);
+      setDate('');
+      setTime('');
+      setLocation('');
+      setInformation('');
+    });
   }
 
   return (
