@@ -5,8 +5,7 @@ import "./PostForm.css";
 import AuthContext from "../../AuthContext";
 
 export function PostForm(props: { onSubmitForm: (post: Post) => void }) {
-  const [userName, setUserName] = useState("");
-  const [date, setDate] = useState("");
+  
   const [thought, setThought] = useState("");
   const { currentUser } = useContext(AuthContext);
 
@@ -18,8 +17,13 @@ export function PostForm(props: { onSubmitForm: (post: Post) => void }) {
       thought: thought,
       date: new Date().toISOString().substring(0, 10)
     };
-    // setThought("");
-    addPost(newPost).then((data) => props.onSubmitForm(data));
+    
+    // addPost(newPost).then((data) => props.onSubmitForm(data));
+    addPost(newPost).then((data) => {
+      props.onSubmitForm(data);
+      setThought(""); // Clear the thought value after form submission
+    });
+
   }
 
   return (

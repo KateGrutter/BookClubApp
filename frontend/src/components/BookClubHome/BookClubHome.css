@@ -10,11 +10,20 @@
 .page-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
+  padding-top: 20px;
+  max-width: 450px;
 
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+.feed-item {
+  margin-bottom: 20px;
+}
 .book-club-home {
-  max-width: 768px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -55,6 +64,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .page-container {
+    max-width: 768px;
+  }
   .book-club-home {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

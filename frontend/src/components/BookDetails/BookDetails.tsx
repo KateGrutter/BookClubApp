@@ -23,33 +23,35 @@ export function BookDetails() {
   return (
     <div>
       <Header />
-      <button className="book-details-home">
-        <Link to={"/feed"} className="book-details-link">
-          Back
-        </Link>
-      </button>
-      <div className="book-details">
-        <img
-          src={details?.imageLinks.thumbnail || NoImage}
-          alt="bookcover"
-          className="book-details-image"
-        />
-        <h3 className="book-details-title">
-          {details?.title} by {details?.authors}
-        </h3>
-        <p className="book-details-description">{details?.description}</p>
-        <button
-          onClick={() => addListBook(details)}
-          className="book-details-button"
-        >
-          Mark as read
+      <div className="book-details-container">
+        <button className="book-details-home">
+          <Link to={"/feed"} className="book-details-link">
+            Back
+          </Link>
         </button>
-        <button
-          onClick={() => setCurrent(details)}
-          className="book-details-button"
-        >
-          Mark as current
-        </button>
+        <div className="book-details">
+          <img
+            src={details?.imageLinks.thumbnail || NoImage}
+            alt="bookcover"
+            className="book-details-image"
+          />
+          <h3 className="book-details-title">
+            {details?.title} by {details?.authors}
+          </h3>
+          <p className="book-details-description">{details?.description}</p>
+          <button
+            onClick={() => addListBook(details)}
+            className="book-details-button"
+          >
+            Mark as read
+          </button>
+          <button
+            onClick={() => setCurrent(details)}
+            className="book-details-button"
+          >
+            Mark as current
+          </button>
+        </div>
       </div>
     </div>
   );

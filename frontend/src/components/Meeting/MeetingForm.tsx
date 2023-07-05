@@ -27,7 +27,7 @@ export function MeetingForm(props: { onAdd: (meeting: Meeting) => void }) {
 
   return (
     <div>
-      <div className="form-container">
+      <div className="meeting-form-container">
         {isFormOpen && (
           <form onSubmit={(e) => onSubmit(e)}>
             <label htmlFor="date">Date</label>

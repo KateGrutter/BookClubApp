@@ -15,11 +15,23 @@
 }
 
 .post h3 {
-  font-weight: bold;
+  font-size: 14px;
+  /* text-align: end; */
   color: var(--dark-green);
   margin-bottom: 10px;
 }
-
+.thought {
+  background-color: var(--white);
+  border: 1px solid var(--battleship-grey);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+}
+.date {
+  font-size: 8px;
+  text-align: end;
+}
 .post p {
   margin-bottom: 10px;
 }

@@ -16,6 +16,7 @@
   height: 100px;
   padding: 10px;
   border: 1px solid var(--battleship-grey);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   resize: none;
   margin-bottom: 10px;
