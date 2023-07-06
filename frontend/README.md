@@ -1,46 +1,28 @@
-# Getting Started with Create React App
+# ChapterChat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This discussion board app is a must-have for book clubs! Both in-person and virtual.
 
-## Available Scripts
+![GitHub contributors](https://img.shields.io/github/contributors/KateGrutter/BookClubApp)
+![GitHub last commit](https://img.shields.io/github/last-commit/KateGrutter/BookClubApp)
 
-In the project directory, you can run:
+A wonderful and convenient way for book club members to connect in real time to discuss the book that they're reading.
 
-### `npm start`
+The ChapterChat team wanted to present book clubs with a way to connect easily in between meetings. Have a thought mid-read? Post it in the chat to keep track of your thoughts and connect with other club members! Our app makes it easy to remember the current book of the month, track past reads, and invite members to the next meeting. Don't lose momentum during your read!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Motivation
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The members in our group are in book clubs (some of them are in more than one), and found that there wasn't a good way to keep track of past reads, or to remember thoughts that they had while reading. This app seeks to connect friends, as well as help you find and connect with new friends, as you bond over your love of reading.
 
-### `npm test`
+## Screenshots
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![ChapterChat](./public/chapterchat.png)
+![ChapterChat](./public/discussionposts.png)
+![ChapterChat](./public/currentbook.png)
 
-### `npm run build`
+## Technology Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project was generated with React version 18.2.0, HTML, CSS, JavaScript (ES6), and TypeScript.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+GoogleAPI
